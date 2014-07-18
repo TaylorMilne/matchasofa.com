@@ -1,0 +1,202 @@
+.page-index #landing
+{
+  -skrollr-animation-name: overlayDisappear;
+}
+
+@-skrollr-keyframes overlayDisappear{
+  0 {
+    height: 100vh;
+    opacity: 1;
+  }
+
+  40 {
+    height: 95vh;
+    opacity: 0.9;
+  }
+
+  180 {
+    height: 40vh;
+    opacity: 0;
+  }
+}
+
+.page-index header nav
+{
+  -skrollr-animation-name: collapseNav;
+}
+
+@-skrollr-keyframes collapseNav{
+  0 {
+    width: 620px;
+  }
+
+  40 {
+    width: 590px;
+  }
+
+  100 {
+    width: 250px;
+  }
+}
+
+
+.page-index header .socialmedia
+{
+  -skrollr-animation-name: socialmediaFade;
+}
+
+@-skrollr-keyframes socialmediaFade{
+  0 {
+    opacity: 1;
+  }
+
+  100 {
+    opacity: 0;
+  }
+
+
+  700-end {
+    opacity: 0;
+  }
+
+  end {
+    opacity: 1;
+  }
+}
+
+
+.page-index .sidebar-cta-unit,
+.page-index .sidebar-cta-video
+{
+  -skrollr-animation-name: sidebarCtas;
+}
+
+@-skrollr-keyframes sidebarCtas{
+  0 {
+    right: 0px;
+  }
+
+  40 {
+    right: -50px;
+  }
+
+  100 {
+    right: -550px;
+  }
+}
+
+
+.page-index .sidebar-cta-contact
+{
+  -skrollr-animation-name: sidebarCtaContact;
+}
+
+@-skrollr-keyframes sidebarCtaContact{
+  300-end {
+    right: -550px;
+  }
+
+  end {
+    right: 0px;
+  }
+}
+
+.page-index .sidebar-cta-build
+{
+  -skrollr-animation-name: sidebarCtaBuild;
+}
+
+@-skrollr-keyframes sidebarCtaBuild{
+  0 {
+    right: 0px;
+    opacity: 1;
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+
+  40 {
+    right: -50px;
+    opacity: 0.9;
+  }
+
+  100 {
+    right: -220px;
+    opacity: 0.4;
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+
+  400-end {
+    opacity: 0.4;
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+
+  end {
+    right: 0;
+    opacity: 1;
+    background-color: rgba(7, 70, 11, 1);
+  }
+}
+
+
+
+
+.page-index .section-modular .unit-top
+{
+  -skrollr-animation-name: unit-top;
+}
+
+@-skrollr-keyframes unit-top{
+  bottom-bottom {
+    top: -150px;
+  }
+
+  top-top {
+    top: -50px;
+  }
+}
+
+.page-index .section-modular .unit-bottom
+{
+  -skrollr-animation-name: unit-bottom;
+}
+
+@-skrollr-keyframes unit-bottom{
+  bottom-bottom {
+    top: 350px;
+  }
+
+  top-top {
+    top: 268px;
+  }
+}
+
+
+.page-index .section-table
+{
+  -skrollr-animation-name: table;
+}
+
+@-skrollr-keyframes table{
+  bottom-top {
+    background-position: 0px 0px;
+  }
+
+  top-bottom {
+    background-position: 200px 0px;
+  }
+}
+
+
+.page-index .section-fabric
+{
+  -skrollr-animation-name: fabrics;
+}
+
+@-skrollr-keyframes fabrics{
+  bottom-top {
+    background-position: 0px 0px;
+  }
+
+  top-bottom {
+    background-position: 100px 100px;
+  }
+}

@@ -1,0 +1,182 @@
+@import 'shared/constants';
+@import 'shared/mixins';
+
+body.page-index
+{
+  #landing
+  {
+    z-index: 99;
+    overflow: hidden;
+    position: relative;
+    min-height: 0;
+
+    .bgCycler
+    {
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      img
+      {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        @include transition(opacity 1.5s);
+
+        &.active
+        {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .units
+    {
+      position: absolute;
+      bottom: 140px;
+      left: 100px;
+      width: 600px;
+      z-index: 99;
+    }
+  }
+
+  .cta
+  {
+    position: fixed;
+    right: 0;
+    padding: 15px;
+    width: 300px;
+    background-color: white;
+  }
+
+  #marqueeSlider
+  {
+    height: 100vh;
+
+    img
+    {
+      margin-top: 0 !important;
+    }
+  }
+
+
+  .section-multifunctional
+  {
+    #versatilitySlider
+    {
+      width: 100%;
+      height: 150px;
+
+      .rsOverflow
+      {
+        height: 0;
+        @include transition(height $defaultTransitionSpeed);
+      }
+
+      .rsThumbs
+      {
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    &.visible-full
+    {
+      padding-bottom: 0;
+
+      #versatilitySlider
+      {
+        height: 700px;
+
+        .rsOverflow
+        {
+          margin-top: 180px;
+        }
+      }
+    }
+
+  }
+
+  .section-modular
+  {
+    min-height: 500px;
+
+    .units-merging
+    {
+      position: relative;
+
+      .unit
+      {
+        position: absolute;
+        right: 0;
+      }
+
+      .unit-bottom
+      {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .section-durable
+  {
+    min-height: 500px;
+
+    img
+    {
+      top: -80px;
+      right: -150px;
+    }
+  }
+
+  .section-fabric
+  {
+    background: image-url('placeholders/turq.jpg') 0 0 repeat;
+    min-height: 400px;
+    clear: both;
+
+    h3
+    {
+      font-weight: 400;
+    }
+  }
+
+  .section-table
+  {
+    background: image-url('placeholders/bamboo.jpg') 0 0 repeat;
+    min-height: 400px;
+  }
+
+  .section-ergonomic
+  {
+    img
+    {
+      left: -100px;
+    }
+  }
+
+  .section-price
+  {
+    padding-bottom: 280px;
+  }
+
+  .section-express
+  {
+    padding-bottom: 0;
+
+    #expressSlider
+    {
+      height: 100vh;
+
+      img
+      {
+        margin-top: 0 !important;
+      }
+    }
+  }
+}
