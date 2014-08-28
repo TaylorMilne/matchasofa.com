@@ -1,0 +1,21 @@
+---
+layout: blog
+class: blog
+---
+
+<div class="page-title">
+  <h1>Blog</h1>
+  <h6>{{ page.title }}</h6>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="summer-content">
+        {% for post in site.categories[page.category] %}
+          {% include post.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

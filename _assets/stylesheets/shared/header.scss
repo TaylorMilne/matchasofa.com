@@ -3,45 +3,87 @@
 
 body
 {
+  // Styles just for the index page
+  &.page-index
+  {
+    header nav
+    {
+      top: 40px;
+      padding: 0 30px;
+      width: 700px;
+    }
+  }
+
+  // Global styles
   header
   {
     nav
     {
       position: fixed;
-      top: 40px;
+      top: 0;
       left: 0;
-      padding: 15px 0 15px 40px;
+      padding: 40px 30px 0;
+      width: 100%;
       background-color: $grey10;
       z-index: 99999;
-      overflow: hidden;
-      width: 620px;
-
-      .logo
-      {
-        -webkit-backface-visibility: hidden; // FIX FOR TRACES BUG
-      }
-
-      .logo, ul, li
-      {
-        display: inline-block;
-      }
+      margin: 0;
+      @include transition(padding-top $fastTransitionSpeed);
 
       ul
       {
+        margin: 0;
+        display: inline-block;
         position: absolute;
-        width: 400px;
 
         li
         {
-          margin-right: 20px;
+          display: inline-block;
 
           a
           {
+            position: relative;
             color: white;
+            padding-right: 20px;
+            padding-left: 20px;
+          }
+
+          &.active
+          {
+            a:after
+            {
+              position: absolute;
+              left: 50%;
+              bottom: -20px;
+              margin-left: -10px;
+              @include triangle(10px, $grey10, top);
+            }
           }
         }
       }
+
+      .logo
+      {
+        display: inline-block;
+        -webkit-backface-visibility: hidden; // FIX FOR TRACES BUG
+      }
+
+      .logo a, li a
+      {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
     }
+
+    // when header is collapsed
+    &.collapsed
+    {
+      nav
+      {
+        padding-top: 0;
+      }
+    }
+
 
     .socialmedia
     {

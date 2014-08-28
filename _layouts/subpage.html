@@ -1,0 +1,18 @@
+---
+layout: layout
+---
+
+<!-- INCLUDE THE HEADER -->
+{% include header.html %}
+  <main>
+    {% if page.showTitle == "true" %}<h1 class="page-title">{{ page.title | capitalize }}</h1>{% endif %}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% include footer.html %}

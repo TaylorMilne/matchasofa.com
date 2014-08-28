@@ -1,0 +1,96 @@
+---
+layout: subpage
+title: info
+---
+
+<div class="row">
+  <div class="col-xs-12">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" data-tabs role="tablist" id="aboutTabs">
+      <li class="active"><a href="#matcha" role="tab" data-toggle="tab">The Concept</a></li>
+      <li><a href="#people" role="tab" data-toggle="tab">The people behind</a></li>
+      <li><a href="#materials" role="tab" data-toggle="tab">Materials</a></li>
+      <li><a href="#shipping" role="tab" data-toggle="tab">Shipping and returns</a></li>
+      <li><a href="#faqs" role="tab" data-toggle="tab">FAQ</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="matcha">
+        <div class="row">
+          <div class="col-xs-6">
+            <p>The MATCHA revolutionizes the livingroom making it a more Open, Zen, Modern and Functional space.</p>
+            <p>It organically converts into a Ottoman, Memory foam bed, Bamboo table, Chaise lounge, workstation. That is all included in the standard unit. Additional add-ons are available to go even further. We call it Multi-functional.</p>
+            <p>We've used eco-friendly products such as Bamboo wood, bamboo foam and Ramie fibre. These materials are not only sustainable, but also have superior properties of their synthetic/non-sustainable siblings.</p>
+          </div>
+          <div class="col-xs-6">
+            <p>Because of it's modularity, you can change your living room setup in seconds. This will make it feel like a new apartment everyday.</p>
+            <p>Shape your living room to make you, or your guests, feel truly welcome. You can now host any event right at home.</p>
+            <p>With MATCHA, <strong>You</strong> are now the designer.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="people">
+        <div class="row">
+          <div class="col-xs-6">
+            <h3>Trevor</h3>
+            <p>Trevor has spent the last 20 years contracting for the Canadian Feature Film,
+            Commercial & Television Industry. In the beginning he worked as a carpenter
+            building and constructing all types of sets and props for commercial television.</p>
+            <p>He was quickly snapped up by management and adapted to the environment.
+            After years of working as an assistant director, he now works more closely with
+            the designers and production management coordinating the on location aspect
+            of filmmaking. Working closely with the producers from all over the world,Trevor
+            has a keen ability to develop relationships and has been involved with countless
+            marketing & viral marketing schemes for all sorts of products.</p>
+            <p>With out of the box thinking, focus and endless creative drive to improve &
+            simplify, he is a great addition to the company. Together, we solidified the design
+            and engineering. We also visualized our branding concept and sales strategies.</p>
+          </div>
+          <div class="col-xs-6">
+            <h3>Julian</h3>
+            <p>Danish designer, Julian Jorgensen, was born and raised in Billund, the town
+            where Lego first started, and subsequently both his parents were part of the
+            design & marketing team at Lego—influencing his creative mind at a very young
+            age and for years to come.</p>
+            <p>During his many years of travelling in Asia, he became more and
+            more inspired by Japanese design. He'd visit several Zen temples in Kyoto, and
+            was in love with the empty rooms, the low seating, and the tatami mat flooring.</p>
+            <p>As he worked & traveled he became an admirer of elegance & simplicity of
+            Japanese furniture, the truth he realized is that all to often they’re uncomfortable
+            —mistakes made by many others, function is lost in the artistic appeal.</p>
+            <p>In 2010 he had had enough combining ideas from past present and future it is of
+            no surprise that years later, he designed a modular sofa concept that is
+            portable, multifunctional, simplistic, & comfortable for various types of people in
+            various types of environments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="materials">
+        <p>The fabric is made from 100% Ramie fibre grown locally in China. Died with natural colours.</p>
+        <p>The foam used is a mix of Bamboo Charcoal Foam, Memory foam and PU foam.</p>
+        <p>All wood is made from eco-friendly bamboo harvested in local province.</p>
+        <p>Download full composition specs here</p>
+      </div>
+
+      <div class="tab-pane fade" id="shipping">
+        <p>Details about shipping and returns</p>
+      </div>
+
+      <div class="tab-pane fade" id="faqs">
+        <ul class="list-group">
+          <div class="panel-group" id="faq_accordion">
+            {% assign counter=0 %}
+            {% for faq in site.data.faqs %}
+              {% assign counter=counter | plus:1 %}
+              {% include faqs.html %}
+            {% endfor %}
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

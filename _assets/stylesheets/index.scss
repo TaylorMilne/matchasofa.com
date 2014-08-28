@@ -3,12 +3,193 @@
 
 body.page-index
 {
+  overflow-x: hidden;
+
+  #skrollr-body
+  {
+    background-color: white;
+  }
+
+  .container-fluid
+  {
+    padding: 40px 30px;
+  }
+
+  section
+  {
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+    background: image-url('placeholders/branch2.jpg') 0 0 repeat;
+
+    .container
+    {
+      position: relative;
+    }
+
+    .section-headline
+    {
+      h1
+      {
+        font-size: 90px;
+        font-weight: 100;
+        color: $green;
+      }
+
+      h2
+      {
+        font-weight: 100;
+        font-size: 80px;
+        color: $green;
+      }
+
+      h3
+      {
+        font-weight: 100;
+        display: inline-block;
+        border: 1px solid $black;
+        border-left-style: none;
+        border-right-style: none;
+        margin: 20px 0;
+      }
+    }
+
+    &.section-inverted
+    {
+      .section-headline
+      {
+        h1, h2, h3
+        {
+          color: $white;
+        }
+
+        h3
+        {
+          border-color: $white;
+        }
+      }
+    }
+
+    &.section-no-padding
+    {
+      padding: 0;
+
+      .section-headline
+      {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        width: 1000px;
+        margin-left: -500px;
+        z-index: 99;
+      }
+    }
+
+    &.section-left,
+    &.section-right
+    {
+      .section-headline, .section-body
+      {
+        position: relative;
+        z-index: 99;
+      }
+
+      .section-body
+      {
+        width: 300px;
+      }
+
+      img
+      {
+        position: absolute;
+        top: 0;
+        z-index: 9;
+      }
+    }
+
+    &.section-left
+    {
+      text-align: left;
+
+      .section-body
+      {
+        float: left;
+      }
+
+      img
+      {
+        right: 0;
+      }
+    }
+
+    &.section-center
+    {
+      text-align: center;
+    }
+
+    &.section-right
+    {
+      text-align: right;
+
+      .section-body
+      {
+        float: right;
+      }
+
+      img
+      {
+        left: 0;
+      }
+    }
+  }
+
+
+  .purchaseFeatures
+  {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+
+    .purchaseFeature
+    {
+      padding: 0;
+
+      a
+      {
+        display: block;
+        padding: 20px;
+        min-height: 160px;
+        color: $black;
+        border-right: 2px solid $white;
+        border-bottom-style: none;
+        border-left-style: none;
+        background-color: rgba($white, 0.5);
+
+        &:hover
+        {
+          color: $white;
+          background-color: rgba($green, 0.7);
+        }
+      }
+
+      &.last-item
+      {
+        a
+        {
+          border-right-style: none;
+        }
+      }
+    }
+  }
+
+
   #landing
   {
     z-index: 99;
     overflow: hidden;
     position: relative;
     min-height: 0;
+    background-color: black;
 
     .bgCycler
     {
@@ -30,7 +211,7 @@ body.page-index
 
         &.active
         {
-          opacity: 0.5;
+          opacity: 0.3;
         }
       }
     }

@@ -18,33 +18,43 @@
 
   <!-- stylesheets -->
   <link rel="stylesheet" type="text/css" href="{% asset_path shared.css %}"/>
-  <link rel="stylesheet" type="text/css" href="{% asset_path application.css %}"/>
 
-  <!-- keyframes for skrollr -->
-  <link rel="stylesheet" type="text/css" href="/skrollr/keyframes.css" data-skrollr-stylesheet />
+  {% if page.class == "index" %}
+    <link rel="stylesheet" type="text/css" href="{% asset_path index.css %}"/>
+    <!-- keyframes for skrollr -->
+    <link rel="stylesheet" type="text/css" href="/skrollr/keyframes.css" data-skrollr-stylesheet />
+  {% else %}
+  <link rel="stylesheet" type="text/css" href="{% asset_path subpages.css %}"/>
+  {% endif %}
 
+  {% if page.class == "blog" %}
+  <link rel="stylesheet" type="text/css" href="{% asset_path blog/blog.css %}"/>
+  {% endif %}
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <script type="text/javascript" src="//use.typekit.net/hld1xsj.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
-<body class="page-{{ page.name }}">
+<body class="page-{{ page.class | replace: ' ', '-' | downcase }}">
 
   {% include fb.html %}
 
-  <div id="skrollr-body">
-    <!-- INCLUDE THE HEADER -->
-    {% include header.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-  </div>
+  {{ content }}
 
   <!-- MAIN JS STUFF -->
   <script type="text/javascript" src="{% asset_path shared.js %}"></script>
-  <script type="text/javascript" src="{% asset_path application.js %}"></script>
+
+  {% if page.class == "index" %}
+    <script type="text/javascript" src="{% asset_path index.js %}"></script>
+  {% else %}
+    <script type="text/javascript" src="{% asset_path subpages.js %}"></script>
+  {% endif %}
+
+  {% if page.class == "blog" %}
+    <script type="text/javascript" src="{% asset_path blog/blog.js %}"></script>
+  {% endif %}
+
 
 </body>
 </html>

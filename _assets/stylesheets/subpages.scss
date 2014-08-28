@@ -1,0 +1,28 @@
+@import 'shared/constants';
+@import 'shared/mixins';
+
+body
+{
+  > main
+  {
+    padding-top: 160px;
+    padding-bottom: 55px;
+    background-color: $white;
+
+    .page-title
+    {
+      float: left;
+      margin-left: 30px;
+
+      h1, h2
+      {
+        font-weight: 100;
+      }
+    }
+  }
+
+  .nav-tabs
+  {
+    margin-bottom: 20px;
+  }
+}

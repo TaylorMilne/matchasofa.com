@@ -6,23 +6,33 @@ cycleImages = ->
   $active.removeClass "active"
   return
 
+scrollTo = (scrollTo, speed) ->
+  $("html, body").animate
+    scrollTop: scrollTo
+  , speed
+
+
+# VARIABLES
+transitionSpeed = 500
+
+
 
 # DOCUMENT READY
 $(document).ready ->
-
 
   # HOME BACKGROUND CYCLER
   $(".bgCycler").fadeIn 2500
   setInterval (->
     cycleImages()
-  ), 7000
+  ), 8000
 
 
   $(".royalSlider").click ->
     $("html, body").animate
       scrollTop: $(this).offset().top
-    , 600
+    , transitionSpeed
     return
+
 
   # MARQUEE SLIDER
   # ==============
@@ -69,7 +79,7 @@ $(document).ready ->
     controlNavigation: "arrows"
     numImagesToPreload: 2
     autoPlay:
-      enabled: true
+      enabled: false
       pauseOnHover: false
 
 
@@ -94,54 +104,51 @@ $(document).ready ->
 
     return
 
+  # VARIABLES
+  landingHeightDecrease = ($(window).height() * 0.6)# this is how much the landing slide decreases in height (60% of window height)
+  landingHeight = ($(window).height() * 0.4) #this is the landing height after scrolling down
+  videoMarqueeOffset = landingHeight
+  videoMarqueePreEnd = videoMarqueeOffset + $("#marqueeSlider").height() - 300
+  videoMarqueeEnd = videoMarqueeOffset + $(window).height()
+
+
   # SIDEBAR CTA VIDEO CLICK ACTIVATE VIDEO
   $(".sidebar-cta-video").click ->
     $("#marqueeSlider .rsPlayBtnIcon").click()
 
-
-  landingOffset = $(window).height() * 0.4 # this is how much the landing slide decreases in height (60% of window height)
-  videoMarqueeOffset = landingOffset - $("#marqueeSlider").offset().top
-  videoMarqueePreEnd = videoMarqueeOffset + $("#marqueeSlider").height() - 300
-  videoMarqueeEnd = videoMarqueeOffset + $(window).height()
-
+  # ADD ACTIVE CLASS TO THE "FEATURES" NAV ITEM WHEN SCROLLING DOWN
   $(window).scroll ->
     scrollPos = $(window).scrollTop()
-
-    if ((scrollPos >= videoMarqueeOffset) and (scrollPos < videoMarqueePreEnd))
-      if (window.location.hash isnt "#video")
-        $.history.push "/video"
-    else if scrollPos >= videoMarqueePreEnd
-      if (window.location.hash isnt "#details")
-        $.history.push "/details"
-    else if scrollPos < 100
-      if (window.location.hash isnt "#/") and (window.location.hash isnt "#") and (window.location.hash isnt "")
-        $.history.push "/"
-    return
-
-
-
-  $.history.on("load change push pushed", (event, url, type) ->
-    if event.type is "load"
-      scrollSpeed = 0
+    if (scrollPos > 100)
+      if (!$("header nav #nav-features").hasClass("active"))
+        $("header nav #nav-features").addClass("active")
     else
-      scrollSpeed = 600
+      if ($("header nav #nav-features").hasClass("active"))
+        $("header nav #nav-features").removeClass("active")
 
-    scrollPos = $(window).scrollTop()
 
-    if (event.type isnt "load") and (event.type isnt "push") and (event.type isnt "pushed")
-      switch url
-        when "video"
-          $("html, body").animate({
-            scrollTop: videoMarqueeOffset
-            }, 600);
+  # FEATURES NAV ITEM CLICK AND HASH
+  # ================================
+  featuresOffset = $("#features").offset().top + landingHeight
 
-        when "details"
-          $("html, body").animate({
-            scrollTop: videoMarqueeOffset + videoMarqueeEnd - landingOffset
-            }, 600);
+  $("header nav #nav-features").click ->
+    scrollTo(featuresOffset, transitionSpeed)
+    console.log featuresOffset
 
-  ).listen "hash"
+  if (window.location.hash == "#features")
+    setTimeout (->
+      scrollTo(featuresOffset, 10)
+      console.log featuresOffset
+      return
+    ), 50
 
+  # SCROLL TO VIDEO WHEN IT IS IS PLAYED
+  # ===================================
+  marqueeSlider.ev.on "rsOnCreateVideoElement", (e, url) ->
+    $("html, body").animate
+      scrollTop: videoMarqueeOffset
+    , transitionSpeed
+    return
 
   # INITIALIZE SKROLLR.
   s = skrollr.init()

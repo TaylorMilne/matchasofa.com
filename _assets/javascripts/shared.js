@@ -1,4 +1,4 @@
-//= require './lib/jquery-1.7.2.min'
+//= require './lib/jquery-1.10.2.min'
 
 //= require 'lib/bootstrap-3.0.3/collapse'
 //= require 'lib/bootstrap-3.0.3/tab'

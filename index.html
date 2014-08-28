@@ -1,6 +1,6 @@
 ---
-layout: layout
-name: index
+layout: index
+exclude_from_search: true
 ---
 
 {% include sidebar-ctas.html %}
@@ -98,9 +98,6 @@ name: index
       <img class="rsImg" src="{{ 'placeholders/inspiration/prodotti-61317-releeb9015c870245d198dae998579049b7.jpg' | asset_path }}">
     </div>
     <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/inspiration/pure-sofa-pure-sofa-coffee-table-tribu2014puresofa02.jpg' | asset_path }}">
-    </div>
-    <div class="rsContent">
       <img class="rsImg" src="{{ 'placeholders/inspiration/apartments-gwyneth-paltrow-manhattan-loft-living-room-design-by-roman-and-william-with-soft-color-ideas-splendid-manhattan-loft-ideas.jpg' | asset_path }}">
     </div>
     <div class="rsContent">
@@ -111,9 +108,6 @@ name: index
     </div>
     <div class="rsContent">
       <img class="rsImg" src="{{ 'placeholders/inspiration/astonishing-beach-house.jpg' | asset_path }}">
-    </div>
-    <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/inspiration/inspiring-japanese-interior-design-ideas-with-wonderful-japanese-wooden-king-sized-bed-700x465.jpg' | asset_path }}">
     </div>
     <div class="rsContent">
       <img class="rsImg" src="{{ 'placeholders/inspiration/albatross-residence.jpg' | asset_path }}">
@@ -148,182 +142,207 @@ name: index
   </div>
 </div>
 
-<section class="section-center section-multifunctional">
-  <div class="container">
-    <div class="section-headline">
-      <h1>Multi functional</h1>
-      <h3>One Product. Many Moments.</h3>
-    </div>
-  </div>
+<div id="features">
 
-  <!-- SLIDER -->
-  <div id="versatilitySlider" class="royalSlider rsDefault marqueeSlider">
-    {% include slide.html img="placeholders/bed-bg.jpg" thumb="placeholders/versatile/bed.png" ablock="<h2>Versatile</h2><p>It's a bed and much more. Slide to see a few of them.</p>" %}
-    {% include slide.html img="placeholders/versatile/table.png" thumb="placeholders/versatile/table.png" ablock="<h2>Also a table</h2><p>It's a bed and much more. Slide to see a few of them.</p>" %}
-    {% include slide.html img="placeholders/versatile/doublebed.png" thumb="placeholders/versatile/doublebed.png" ablock="<h2>Doublebed</h2><p>It's a bed and much more. Slide to see a few of them.</p>" %}
-  </div>
-</section>
-
-
-<section class="section-left section-modular">
-  <div class="container">
-    <div class="units-merging">
-      <img width="500" data-achor=".unit-bottom" class="unit unit-top" src="{{ 'placeholders/unit-top.png' | asset_path }}">
-      <img width="490" class="unit unit-bottom" src="{{ 'placeholders/unit-bottom.png' | asset_path }}">
-    </div>
-
-    <div class="section-headline">
-      <h2>Truly modular</h2>
-      <h3>Everything fits perfect together</h3>
-    </div>
-    <div class="section-body">
-      <p>1 layer is eastern style.<br>2 layers is western style.<br>It's all up to you.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section-right section-table">
-  <div class="container">
-    <div class="section-headline">
-      <h2>Bamboo table</h2>
-      <h3>Every unit has it built in.</h3>
-    </div>
-    <div class="section-body">
-      <p>The gorgeous bamboo board slides out from the bottom case.</p>
-      <p>Tip: click the table make it slide back into the case.</p>
-    </div>
-    <img width="600" src="{{ 'placeholders/table.png' | asset_path }}">
-  </div>
-</section>
-
-<section class="section-left section-durable">
-  <div class="container">
-    <div class="section-headline">
-      <h2>Solid comfort</h2>
-      <h3>Bended wood is key</h3>
-    </div>
-    <div class="section-body">
-      <p>Each backrest is firmly supported by bended bamboo wood.</p>
-      <p>tip: click the back support to slide it out</p>
-    </div>
-    <img width="600" src="{{ 'placeholders/5.png' | asset_path }}">
-  </div>
-</section>
-
-
-<section class="section-right section-ergonomic">
-  <div class="container">
-    <div class="section-headline">
-      <h2>Ergonomic Memory</h2>
-      <h3>Experience the softness of memory foam</h3>
-    </div>
-    <div class="section-body">
-      <p>The round pillow makes your back sit straight. For a variety you can always remove it.</p>
-      <p>Tip: click the backrest to see whats hidden inside. (memory foam layer becomes visible)</p>
-    </div>
-    <img width="600" src="{{ 'placeholders/ergo.png' | asset_path }}">
-  </div>
-</section>
-
-<section class="section-left section-inverted section-fabric">
-  <div class="container">
-    <div class="section-headline">
-      <h2>Raw organic</h2>
-      <h3>Durable textile thats feels amazing</h3><br>
-      <div class="btn btn-lg btn-inverted">Free fabric swatch &rsaquo;</div>
-    </div>
-    <img src="{{ 'placeholders/fabrics.png' | asset_path }}">
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6">
-        <h2>Easy maintenance</h2>
-        <p>If you spill wine, no need to worry.<br>With a traditional sofa you have to replace the whole goddamn thing.<br>With this one you need only replace a single component!</p>
-        <p>Tip: Click the sofa to spill some wine/destroy the sofa.<br>(then click again to simply remove it)</p>
-      </div>
-      <div class="col-xs-6">
-        <h2>Fits into <b>your</b> home</h2>
-        <img width="300" style="float: right;" src="{{ 'placeholders/layout.png' | asset_path }}">
-        <p>Enter your room's dimensions and see how your setup and variations will fit.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-center section-no-padding section-express">
-
-  <!-- SLIDER -->
-  <div id="expressSlider" class="royalSlider rsDefault marqueeSlider">
-    <div class="rsContent">
+  <section class="section-center section-multifunctional">
+    <div class="container">
       <div class="section-headline">
-        <h2>Express yourself</h2>
-        <h3>Be creative. Be unique.<br>See the infinite ways our customers express themselves.</h3>
+        <h1>Multi functional</h1>
+        <h3>One Product. Many Moments.</h3>
       </div>
-      <img class="rsImg" src="{{ 'placeholders/prodotti-60934-rel11fd078f-309f-479c-a89f-b6dbf8cc96ce.jpg' | asset_path }}">
     </div>
-    <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/inspiration/imag0203.jpg' | asset_path }}">
-    </div>
-    <img class="rsImg" src="{{ 'placeholders/inspiration/Best-Interior-Designed-Homes-Japanese-Modern.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/living-room-red-cushions-and-white-sofa-with-floral-table-and-woden-staircase-comfortable-concave-seating-area-for-lounge.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/home-luxury-loft-of-the-traditional-japanese-style-home-design-ideas-with-classic-theme-sliding-door-style-and-beautiful-large-picture-frame-wall-decorating-also-elegant-wood-flooring-top-traditional.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/PXLNTWRk054-4.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/ego-01.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/extraordinary-Japanese-inteior-design-in-living-room-with-wooden-table-cushion-stunning-dividers-and-also-glossy-wooden-flooring.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/JeanPaulGaultierRocheBobois_3.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/fPdecor_roche-bobois-sofa-black-00.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/black-sofa-designer-living-room-furniture.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/Gray-Colored-Modern-Ligne-Roset-Sofa-Designs.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/livingroom-inspiration-stunning-four-light-hanging-lamps-over-white-couch-as-well-as-low-square-coffee-desk-on-black-gloss-glass-tile-floors-in-japanese-living-room-design-ideas-artistic-japanese-li.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/bob3.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/contemporary-upholstered-double-beds-9378-3655215.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/Book-Sofa-Ransa-by-Younes-Duret.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/collection-1024x768.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/colorfull-w-hotel-interior-design-ideas.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/contemporary-corner-sofas-9378-6239511.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/Detail-of-Eco-Modular-Sofa-Collection-Sen-Studio180º-Designer-Makers.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/mah_jong_1.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/mah_jong_2.jpg' | asset_path }}">
-    <img class="rsImg" src="{{ 'placeholders/inspiration/lai-residence-pmk-designers-gessato-gblog-2.jpg' | asset_path }}">
-    <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/DSC00167_large.jpg' | asset_path }}">
-    </div>
-    <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/inspiration/bedroom-inspiring-green-sofa-to-decorate-wondrous-living-room-interior-design-by-ikea-virtual-bedroom-designer.jpg' | asset_path }}">
-    </div>
-    <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/inspiration/wooden-platform-modern-japanese-bed-with-classic-style.jpg' | asset_path }}">
-    </div>
-    <div class="rsContent">
-      <img class="rsImg" src="{{ 'placeholders/inspiration/imag0206.jpg' | asset_path }}">
-    </div>
-  </div>
-</section>
 
-<section class="section-center section-price">
-  <div class="container">
-    <div class="section-headline">
-      <h3>$798 per unit</h3>
-      <p>(Great student discounts available.)</p>
-      <div class="btn btn-lg btn-inverted pulse">Buy online now</div>
+    <!-- SLIDER -->
+    <div id="versatilitySlider" class="royalSlider rsDefault marqueeSlider">
+      {% include slide.html img="placeholders/bed-bg.jpg" thumb="placeholders/versatile/bed.png" ablock="<h2>Versatile</h2><p>It's a bed and much more. Slide to see a few of them.</p>" %}
+      {% include slide.html img="placeholders/versatile/table.png" thumb="placeholders/versatile/table.png" ablock="<h2>Also a table</h2><p>It's a bed and much more. Slide to see a few of them.</p>" %}
+      {% include slide.html img="placeholders/versatile/doublebed.png" thumb="placeholders/versatile/doublebed.png" ablock="<h2>Doublebed</h2><p>It's a bed and much more. Slide to see a few of them.</p>" %}
     </div>
-  </div>
+  </section>
 
-  <div class="row purchaseFeatures text-left">
-    <div class="col-xs-4 purchaseFeature">
-      <h4><i class="fa fa-truck"></i> Free shipping</h4>
-      <p>Orders over $900 ship free. Your MATCHA can be shipped today, August 23rd. Order now.</p>
+
+  <section class="section-left section-modular">
+    <div class="container">
+      <div class="units-merging">
+        <img width="500" data-achor=".unit-bottom" class="unit unit-top" src="{{ 'placeholders/unit-top.png' | asset_path }}">
+        <img width="490" class="unit unit-bottom" src="{{ 'placeholders/unit-bottom.png' | asset_path }}">
+      </div>
+
+      <div class="section-headline">
+        <h2>Truly modular</h2>
+        <h3>Everything fits perfect together</h3>
+      </div>
+      <div class="section-body">
+        <p>1 layer is eastern style.<br>2 layers is western style.<br>It's all up to you.</p>
+      </div>
     </div>
-    <div class="col-xs-4 purchaseFeature">
-      <h4><i class="fa fa-smile-o"></i> Free returns</h4>
-      <p>We want you to love your MATCHA. If you don't, send it back (for free) and get your money back. No questions asked.</p>
+  </section>
+
+  <section class="section-right section-table">
+    <div class="container">
+      <div class="section-headline">
+        <h2>Bamboo table</h2>
+        <h3>Every unit has it built in.</h3>
+      </div>
+      <div class="section-body">
+        <p>The gorgeous bamboo board slides out from the bottom case.</p>
+        <p>Tip: click the table make it slide back into the case.</p>
+      </div>
+      <img width="600" src="{{ 'placeholders/table.png' | asset_path }}">
     </div>
-    <div class="col-xs-4 purchaseFeature last-item">
-      <h4><i class="fa fa-heart"></i> Matcha warranty</h4>
-      <p>Your MATCHAs will last lifetimes. That's why we offer a 1-year warranty.</p>
+  </section>
+
+  <section class="section-left section-durable">
+    <div class="container">
+      <div class="section-headline">
+        <h2>Solid comfort</h2>
+        <h3>Bended wood is key</h3>
+      </div>
+      <div class="section-body">
+        <p>Each backrest is firmly supported by bended bamboo wood.</p>
+        <p>tip: click the back support to slide it out</p>
+      </div>
+      <img width="600" src="{{ 'placeholders/5.png' | asset_path }}">
     </div>
-  </div>
-</section>
+  </section>
+
+
+  <section class="section-right section-ergonomic">
+    <div class="container">
+      <div class="section-headline">
+        <h2>Ergonomic Memory</h2>
+        <h3>Experience the softness of memory foam</h3>
+      </div>
+      <div class="section-body">
+        <p>The round pillow makes your back sit straight. For a variety you can always remove it.</p>
+        <p>Tip: click the backrest to see whats hidden inside. (memory foam layer becomes visible)</p>
+      </div>
+      <img width="600" src="{{ 'placeholders/ergo.png' | asset_path }}">
+    </div>
+  </section>
+
+  <section class="section-left section-inverted section-fabric">
+    <div class="container">
+      <div class="section-headline">
+        <h2>Raw organic</h2>
+        <h3>Durable textile thats feels amazing</h3><br>
+        <div class="btn btn-lg btn-inverted">Free fabric swatch &rsaquo;</div>
+      </div>
+      <img src="{{ 'placeholders/fabrics.png' | asset_path }}">
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <h2>Easy maintenance</h2>
+          <p>If you spill wine, no need to worry.<br>With a traditional sofa you have to replace the whole goddamn thing.<br>With this one you need only replace a single component!</p>
+          <p>Tip: Click the sofa to spill some wine/destroy the sofa.<br>(then click again to simply remove it)</p>
+        </div>
+        <div class="col-xs-6">
+          <h2>Fits into <b>your</b> home</h2>
+          <img width="300" style="float: right;" src="{{ 'placeholders/layout.png' | asset_path }}">
+          <p>Enter your room's dimensions and see how your setup and variations will fit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-center section-no-padding section-express">
+
+    <!-- SLIDER -->
+    <div id="expressSlider" class="royalSlider rsDefault marqueeSlider">
+      <div class="rsContent">
+        <div class="section-headline">
+          <h2>Express yourself</h2>
+          <h3>Be creative. Be unique.<br>See the infinite ways our customers express themselves.</h3>
+        </div>
+        <img class="rsImg" src="{{ 'placeholders/prodotti-60934-rel11fd078f-309f-479c-a89f-b6dbf8cc96ce.jpg' | asset_path }}">
+      </div>
+      <div class="rsContent">
+        <img class="rsImg" src="{{ 'placeholders/inspiration/imag0203.jpg' | asset_path }}">
+      </div>
+      <img class="rsImg" src="{{ 'placeholders/inspiration/Best-Interior-Designed-Homes-Japanese-Modern.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/living-room-red-cushions-and-white-sofa-with-floral-table-and-woden-staircase-comfortable-concave-seating-area-for-lounge.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/home-luxury-loft-of-the-traditional-japanese-style-home-design-ideas-with-classic-theme-sliding-door-style-and-beautiful-large-picture-frame-wall-decorating-also-elegant-wood-flooring-top-traditional.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/PXLNTWRk054-4.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/ego-01.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/extraordinary-Japanese-inteior-design-in-living-room-with-wooden-table-cushion-stunning-dividers-and-also-glossy-wooden-flooring.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/JeanPaulGaultierRocheBobois_3.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/fPdecor_roche-bobois-sofa-black-00.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/black-sofa-designer-living-room-furniture.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/Gray-Colored-Modern-Ligne-Roset-Sofa-Designs.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/livingroom-inspiration-stunning-four-light-hanging-lamps-over-white-couch-as-well-as-low-square-coffee-desk-on-black-gloss-glass-tile-floors-in-japanese-living-room-design-ideas-artistic-japanese-li.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/bob3.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/contemporary-upholstered-double-beds-9378-3655215.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/Book-Sofa-Ransa-by-Younes-Duret.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/collection-1024x768.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/colorfull-w-hotel-interior-design-ideas.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/contemporary-corner-sofas-9378-6239511.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/Detail-of-Eco-Modular-Sofa-Collection-Sen-Studio180º-Designer-Makers.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/mah_jong_1.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/mah_jong_2.jpg' | asset_path }}">
+      <img class="rsImg" src="{{ 'placeholders/inspiration/lai-residence-pmk-designers-gessato-gblog-2.jpg' | asset_path }}">
+      <div class="rsContent">
+        <img class="rsImg" src="{{ 'placeholders/DSC00167_large.jpg' | asset_path }}">
+      </div>
+      <div class="rsContent">
+        <img class="rsImg" src="{{ 'placeholders/inspiration/bedroom-inspiring-green-sofa-to-decorate-wondrous-living-room-interior-design-by-ikea-virtual-bedroom-designer.jpg' | asset_path }}">
+      </div>
+      <div class="rsContent">
+        <img class="rsImg" src="{{ 'placeholders/inspiration/wooden-platform-modern-japanese-bed-with-classic-style.jpg' | asset_path }}">
+      </div>
+      <div class="rsContent">
+        <img class="rsImg" src="{{ 'placeholders/inspiration/imag0206.jpg' | asset_path }}">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-center section-price">
+    <div class="container">
+      <div class="section-headline">
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>Standard</h4>
+          </div>
+          <div class="col-xs-6">
+            <h4>Deluxe</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h2>$798</h2>
+            <p>Great for students and small spaces</p>
+          </div>
+          <div class="col-xs-6">
+            <h2>$1100</h2>
+            <p>Bamboo table built in</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="btn btn-lg btn-inverted pulse">Buy online now</div> -->
+    </div>
+
+    <div class="row purchaseFeatures text-left">
+      <div class="col-xs-4 purchaseFeature">
+        <a href="/about/#shipping">
+          <h4><i class="fa fa-truck"></i> Free shipping</h4>
+          <p>Orders over $900 ship free. Your MATCHA can be shipped today, August 23rd. Order now.</p>
+        </a>
+      </div>
+      <div class="col-xs-4 purchaseFeature">
+        <a href="/about/#shipping">
+          <h4><i class="fa fa-smile-o"></i> Free returns</h4>
+          <p>We want you to love your MATCHA. If you don't, send it back (for free) and get your money back. No questions asked.</p>
+        </a>
+      </div>
+      <div class="col-xs-4 purchaseFeature last-item">
+        <a href="/about/#shipping">
+          <h4><i class="fa fa-heart"></i> Matcha warranty</h4>
+          <p>Your MATCHAs will last lifetimes. That's why we offer a 1-year warranty.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

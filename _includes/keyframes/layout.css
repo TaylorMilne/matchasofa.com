@@ -27,7 +27,7 @@
 
 @-skrollr-keyframes collapseNav{
   0 {
-    width: 620px;
+    width: 700px;
   }
 
   40 {
@@ -37,32 +37,45 @@
   100 {
     width: 250px;
   }
+
+  400-end {
+    width: 250px;
+  }
+
+  end {
+    width: 700px;
+  }
 }
 
 
-.page-index header .socialmedia
+
+.page-index header nav ul
 {
-  -skrollr-animation-name: socialmediaFade;
+  -skrollr-animation-name: hideNavItems;
 }
 
-@-skrollr-keyframes socialmediaFade{
+@-skrollr-keyframes hideNavItems{
   0 {
+    margin-left: 0px;
     opacity: 1;
   }
 
-  100 {
+  50 {
+    margin-left: -450px;
     opacity: 0;
   }
 
-
-  700-end {
+  400-end {
+    margin-left: -450px;
     opacity: 0;
   }
 
   end {
+    margin-left: 0px;
     opacity: 1;
   }
 }
+
 
 
 .page-index .sidebar-cta-unit,

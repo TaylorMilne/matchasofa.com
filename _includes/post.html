@@ -1,0 +1,31 @@
+<article class="summer-index-post post row">
+  <div class="col-xs-12 col-sm-3 col-md-2 columns datetime">
+    <span class="summer-post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        <span class="day">
+          {{ post.date | date: "%d" }}
+        </span>
+        <span class="month-year">
+          {{ post.date | date: "%B %Y" }}
+        </span>
+      </time>
+    </span>
+  </div>
+  <div class="col-xs-12 col-sm-9 col-md-10 columns">
+    <header class="summer-post-header">
+      <h2 class="summer-post-title">
+        <a href="{{ site.url }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+    </header>
+
+    <section class="summer-post-excerpt">
+      <p>{{ post.content | strip_html | truncatewords:30 }}</p>
+    </section>
+
+    <div class="summer-index-post-tags">
+      {% for tag in post.categories %}<small><a href="{{ site.url }}/blog/{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a></small>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
+    </div>
+  </div>
+</article>
