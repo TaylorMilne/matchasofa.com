@@ -19,11 +19,11 @@ published: true
 
 ### Body text
 
+![Screen Shot 2014-10-14 at 7.25.04 PM.png](/_posts/images/Screen Shot 2014-10-14 at 7.25.04 PM.png)
+
+
 This is a test
 ![Screen Shot 2014-10-02 at 8.49.12 PM.png](/_posts/images/Screen%20Shot%202014-10-02%20at%208.49.12%20PM.png)
-
-![Screen Shot 2014-10-04 at 9.16.49 PM.png](/_posts/images/Screen Shot 2014-10-04 at 9.16.49 PM.png)
-
 
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
 
