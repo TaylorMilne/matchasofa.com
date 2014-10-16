@@ -64,12 +64,12 @@
   {% if page.class == "index" %}
     <script type="text/javascript" src="{% if page.url == "" %}{{ site.url }}/assets/index.js{% else %}{% asset_path index.js %}{% endif %}"></script>
   {% else %}
-    <script type="text/javascript" src="{% if page.url == "" %}{{ site.url }}/assets/subpages.js{% else %}{% asset_path subpages.js %}{% endif %}"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/subpages.js"></script>
   {% endif %}
 
 
   {% if page.class == "blog" %}
-    <script type="text/javascript" src="{% if page.url == "" %}{{ site.url }}/assets/blog/blog.js{% else %}{% asset_path blog/blog.js %}{% endif %}"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/blog/blog.js"></script>
   {% endif %}
 
 
