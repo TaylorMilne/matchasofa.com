@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=no">
 
-  <title>{% unless page.title == "" %}{{ page.title | upcase }} - {% endunless %}MATCHA SOFA</title>
+  <title>{% unless page.title == blank %}{{ page.title | upcase }} - {% endunless %}MATCHA SOFA</title>
   <meta name="description" content="{{ page.description }}" />
 
   {% if page.type == "post" %}
@@ -29,7 +29,7 @@
   <meta property="og:image" content="{{ site.url }}/{{ site.logo_url | asset_path }}"/>
 
   <!-- stylesheets -->
-  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{{ site.url }}/assets/shared.css{% else %}{% asset_path shared.css %}{% endif %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == blank %}{{ site.url }}/assets/shared.css{% else %}{% asset_path shared.css %}{% endif %}"/>
 
   {% if page.class == "index" %}
     <link rel="stylesheet" type="text/css" href="{% asset_path index.css %}"/>
@@ -40,11 +40,11 @@
     <link rel="stylesheet" type="text/css" href="/skrollr/keyframes-mobile.css" media="screen and (max-width: 479px)" data-skrollr-stylesheet />
 
   {% else %}
-  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{{ site.url }}/assets/subpages.css{% else %}{% asset_path subpages.css %}{% endif %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == blank %}{{ site.url }}/assets/subpages.css{% else %}{% asset_path subpages.css %}{% endif %}"/>
   {% endif %}
 
   {% if page.class == "blog" %}
-  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{{ site.url }}/assets/blog/blog.css{% else %}{% asset_path blog/blog.css %}{% endif %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == blank %}{{ site.url }}/assets/blog/blog.css{% else %}{% asset_path blog/blog.css %}{% endif %}"/>
   {% endif %}
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
