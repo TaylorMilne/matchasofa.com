@@ -31,7 +31,7 @@ body
       &.sidebar-cta-unit
       {
         padding: 20px 30px;
-        bottom: 270px;
+        bottom: 160px;
 
         .headline
         {
@@ -72,15 +72,16 @@ body
       {
         right: -450px;
         padding: 4px 20px 4px 10px;
-        background-color: rgba($white, 0.6);
-        bottom: 150px;
+        bottom: 120px;
         width: 350px;
+        text-align: right;
+        background: transparent;
       }
 
       &.sidebar-cta-video
       {
         background-color: rgba($green, 0.8);
-        bottom: 150px;
+        bottom: 40px;
 
         .cta-wrapper .cta-content
         {
@@ -96,8 +97,9 @@ body
       &.sidebar-cta-build
       {
         right: 0;
-        background-color: rgba($grey10, 0.8);
         bottom: 40px;
+        width: 300px;
+        background-color: $green;
 
         ul
         {
@@ -106,9 +108,9 @@ body
           list-style-type: none;
         }
 
-        &:hover
+        small
         {
-          opacity: 1 !important;
+          font-size: 0.7em;
         }
       }
     }

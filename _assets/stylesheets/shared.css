@@ -12,5 +12,5 @@
   *= require './shared/layout.scss'
   *= require './shared/header.scss'
   *= require './shared/sidebar-ctas.scss'
-
+  *= require './shared/mobilenav.scss'
   */

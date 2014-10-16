@@ -1,28 +1,44 @@
+---
+---
+
 <!DOCTYPE html>
-<html lang="en" class="wf-loading">
+<html lang="en" class="wf-loading" itemscope itemtype="http://schema.org/Article">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=no">
 
-  <title>MATCHASOFA</title>
+  <title>{% unless page.title == "" %}{{ page.title | upcase }} - {% endunless %}MATCHA SOFA</title>
+  <meta name="description" content="{{ page.description }}" />
+
+  {% if page.type == "post" %}
+    {% include head_meta_article.html %}
+  {% elsif page.type == "product" %}
+    {% include head_meta_product.html %}
+  {% else %}
+    {% include head_meta.html %}
+  {% endif %}
+
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <meta property="og:title" content="MATCHASOFA" />
-  <meta property="og:description" content="MATCHASOFA" />
+  <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:url" content="http://matchasofa.com" />
-  <meta property="og:image" content="MATCHASOFA"/>
+  <meta property="og:image" content="{{ site.url }}/{{ site.logo_url | asset_path }}"/>
 
   <!-- stylesheets -->
   <link rel="stylesheet" type="text/css" href="{% asset_path shared.css %}"/>
 
   {% if page.class == "index" %}
     <link rel="stylesheet" type="text/css" href="{% asset_path index.css %}"/>
-    <!-- keyframes for skrollr -->
-    <link rel="stylesheet" type="text/css" href="/skrollr/keyframes.css" data-skrollr-stylesheet />
+    <!-- keyframes for non-mobile skrollr -->
+    <link rel="stylesheet" type="text/css" href="/skrollr/keyframes.css" media="screen and (min-width: 480px)" data-skrollr-stylesheet />
+
+    <!-- keyframes for mobile skrollr -->
+    <link rel="stylesheet" type="text/css" href="/skrollr/keyframes-mobile.css" media="screen and (max-width: 479px)" data-skrollr-stylesheet />
+
   {% else %}
   <link rel="stylesheet" type="text/css" href="{% asset_path subpages.css %}"/>
   {% endif %}
@@ -50,6 +66,7 @@
   {% else %}
     <script type="text/javascript" src="{% asset_path subpages.js %}"></script>
   {% endif %}
+
 
   {% if page.class == "blog" %}
     <script type="text/javascript" src="{% asset_path blog/blog.js %}"></script>

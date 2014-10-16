@@ -1,5 +1,9 @@
 @import "constants";
 
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+} 
 
 /* mixins */
 @mixin transition($transition)

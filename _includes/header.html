@@ -2,11 +2,16 @@
   <nav>
     <div class="logo"><a href="/"><img src="{{ 'placeholders/logo-white.png' | asset_path }}"></a></div>
     <ul>
-      <li id="nav-features"><a href="/#features">FEATURES</a></li>
-      <li id="nav-info" class="{% if page.title == 'info' %}active{% endif %}"><a href="/info">INFO</a></li>
-      <li><a href="/info">{% if page.class != "index" %}<div id="clock"></div>{% else %}COMING SOON{% endif %}</a></li>
+      <li id="nav-features" class="{% if page.class == 'index' %}active{% endif %}"><a href="/#features">FEATURES</a></li>
+      <li id="nav-info" class="{% if page.class == 'info' %}active{% endif %}"><a href="/info">INFO</a></li>
+      <li id="nav-blog" class="{% if page.class == 'blog' %}active{% endif %}"><a href="/blog">BLOG</a></li>
+      <li><a href="/info">{% if page.class != "index" %}<div id="clock"></div>{% endif %}</a></li>
     </ul>
-    {% if page.class != "404" %}{% if page.class != "index" %}{% include search.html %}{% endif %}{% endif %}
+    {% if page.class != "404" %}
+      {% include search.html %}
+    {% endif %}
+
+    {% include mobilenav.html %}
   </nav>
   <!-- {% include social.html %} -->
 </header>

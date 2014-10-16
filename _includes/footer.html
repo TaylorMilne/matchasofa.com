@@ -1,28 +1,37 @@
 <footer>
+  {% if include.punchline == "true" %}
+  <div id="punchline" class="darkgrey">
+    <h2>Be part of the living revolution</h2>
+    <br>
+    {% include social.html %}
+  </div>
+  {% endif %}
+
+  {% if include.nav != "hide" %}
   <div class="container-fluid">
     <div class="row">
-
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-md-8">
         <nav>
-          <li><a href="/">Home</a></li>
-          <li><a href="/info">Info</a></li>
-          <li><a href="/info/#shipping">Shipping</a></li>
-          <li><a href="/info/#faqs">FAQ</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/info">Info</a></div>
+          <div class="nav-item"><a href="/info/#shipping">Shipping</a></div>
+          <div class="line-break visible-xs"></div>
+          <div class="nav-item"><a href="/info/#faqs">FAQ</a></div>
+          <div class="nav-item"><a href="/blog">Blog</a></div>
+          <div class="nav-item"><a href="/partners">Partners</a></div>
+          <div class="nav-item"><a href="/contact">Contact</a></div>
         </nav>
-
         {% include social.html %}
-
       </div>
     </div>
+  </div>
+  {% endif %}
 
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row p-t-large copyright darkgrey">
       <div class="col-xs-12">
-        <address>
-          &copy; MATCHASOFA INC<br>
-          Designed in Vancouver, Canada<br><br>
-        </address>
+        &copy; MATCHASOFA INC<br>
+        Designed in Vancouver, Canada
       </div>
     </div>
   </div>

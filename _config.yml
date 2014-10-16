@@ -6,16 +6,28 @@ laptop_end_width: 1450
 
 
 # SITE VARIABLES
-title: MATCHASOFA
-url: http://localhost:4000
+title: MATCHA SOFA
+description: Multi functional minimalistic furniture. Simplify your living.
 baseurl: /
+dev_url: http://localhost:4000
+stage_url: http://matchasofa.com
+prod_url: http://matchasofa.com
+url: http://matchasofa.com #default url
+logo_url: logo.png
 
-disqus_shortname: hmfaysal
+
+# SOCIAL MEDIA
+author: MATCHA SOFA #default author name
+fb_numeric_id: 584855071633081
+google_plus: matchasofa
+disqus_shortname: matchasofa
+twitter_handle: matchasofa
+twitter_id: 000
+twitter_img_thumb: logo.png # should be square and 120 x 120
+twitter_img_large: logo.png # should be square and 280 x 150
+
 share:            true
-# Change url to your domain. Leave localhost server or blank when working locally.
-# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
-# whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	  http://localhost:4000
+
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -44,6 +56,8 @@ kramdown:
     coderay_css: class
 
 
+gems:
+  - jekyll-sitemap
 
 # other site variables and configs
 exclude:

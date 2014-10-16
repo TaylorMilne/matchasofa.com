@@ -19,23 +19,20 @@ header nav #search
 {
   position: absolute;
   right: 30px;
-  margin-top: -50px;
+  bottom: 10px;
+  width: 30px;
+  @include transition(width $defaultTransitionSpeed);
 
   input
   {
     color: white;
-    width: 30px;
+    width: 100%;
     padding: 5px;
-    background: transparent;
-    @include transition(width $defaultTransitionSpeed);
   }
 
   &.focused
   {
-    input
-    {
-      width: 200px;
-    }
+    width: 200px;
   }
 
 }
@@ -48,7 +45,8 @@ header nav #search
     width: 30px;
     padding: 5px;
     border: 0;
-    background: transparent;
+    background-color: transparent;
+    @include transition(background-color $defaultTransitionSpeed);
   }
 
   &.focused
@@ -56,7 +54,7 @@ header nav #search
     input
     {
       outline: none !important;
-      background: $green;
+      background-color: $green;
     }
   }
 
@@ -121,27 +119,28 @@ header nav #search
 
 @media (max-width: $screen-xs-max)
 {
-  #search
+  header nav
   {
-    position: absolute;
-    top: 124px;
-    right: 15px;
-
-    input
+    #search
     {
-      float: right;
-      width: 100%;
+      right: 55px;
+      @include transition((width $defaultTransitionSpeed, right $defaultTransitionSpeed));
+
+      &.focused
+      {
+        @include calc(width, "100% - 70px");
+      }
     }
-  }
 
-  #search-results
-  {
-    right: 0;
-    top: 30px;
-
-    a
+    #search-results
     {
-      white-space: normal;
+      right: 0;
+      top: 30px;
+
+      a
+      {
+        white-space: normal;
+      }
     }
   }
 }

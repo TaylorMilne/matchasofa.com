@@ -19,10 +19,64 @@ body
         font-weight: 100;
       }
     }
+
+    .right-sidebar
+    {
+      text-align: center;
+
+      .socialmedia
+      {
+        a
+        {
+          display: block;
+          font-size: 2.5em;
+        }
+      }
+    }
   }
 
   .nav-tabs
   {
     margin-bottom: 20px;
+
+    >li>a
+    {
+      padding: 10px;
+    }
   }
 }
+
+
+// INFO PAGE STYLES
+body.page-info
+{
+}
+
+
+// FAQs styles
+// ===========
+#faqs
+{
+  #faq_accordion
+  {
+    margin-bottom: 20px;
+  }
+
+  .panel
+  {
+    border-bottom: 1px solid $grey80;
+    padding-top: 15px;
+
+    .faq-question
+    {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+
+// SHOW MORE STYLES
+// ================
+.showmore_content { position:relative; overflow:hidden; }
+.showmore_trigger { width:100%; height:45px; line-height:45px; cursor:pointer; }
+.showmore_trigger span { display:block; }

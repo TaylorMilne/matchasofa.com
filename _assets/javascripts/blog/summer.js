@@ -26,7 +26,8 @@ var summer = (function ($) {
         if ($(bgCheckClass).length && $(postBgImages).length) {
             BackgroundCheck.init({
                 targets: bgCheckClass,
-                images: postBgImages
+                images: postBgImages,
+                debug: true
             });
         }
     },
@@ -57,5 +58,10 @@ var summer = (function ($) {
 })(jQuery);
 
 (function () {
-    summer.init();
+  summer.init();
+
+  setTimeout(function(){
+    // All targets
+    BackgroundCheck.refresh();
+  }, 100);
 })();

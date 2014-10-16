@@ -287,8 +287,6 @@ Post and page thumbnails work the same way. These are used by [Open Graph](https
 
 Here's an example of what a tweet to your site could look like if you activate Twitter Cards and include all the metas in your post's YAML.
 
-<img src="{{ site.url }}/images/twitter-card-summary-large-image.jpg" alt="search screenshot">
-
 #### Social Share Links
 
 To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:

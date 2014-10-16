@@ -5,6 +5,24 @@ body.page-index
 {
   overflow-x: hidden;
 
+  header
+  {
+    >nav
+    {
+      top: 40px;
+      padding: 0 30px;
+    }
+
+    #search
+    {
+      position: fixed;
+      top: 40px;
+      right: 30px;
+    }
+  }
+
+
+
   #skrollr-body
   {
     background-color: white;
@@ -31,7 +49,7 @@ body.page-index
     {
       h1
       {
-        font-size: 90px;
+        font-size: 3em;
         font-weight: 100;
         color: $green;
       }
@@ -39,7 +57,7 @@ body.page-index
       h2
       {
         font-weight: 100;
-        font-size: 80px;
+        font-size: 2.8em;
         color: $green;
       }
 
@@ -357,6 +375,102 @@ body.page-index
       img
       {
         margin-top: 0 !important;
+      }
+    }
+  }
+
+  footer
+  {
+    position: relative;
+    height: 100vh;
+
+    .copyright
+    {
+      color: $grey20;
+      position: absolute;
+      bottom: 60px;
+      left: 30px;
+    }
+  }
+}
+
+
+@media (max-width: $screen-xs-max)
+{
+  body.page-index
+  {
+    #landing
+    {
+      display: none;
+    }
+
+    .sidebar-ctas
+    {
+      display: none;
+    }
+
+    section
+    {
+      padding: 0 0 20px 0;
+
+      .section-headline
+      {
+        padding: 20px 15px;
+        text-align: center;
+        background-color: rgba($grey10, 0.7);
+
+        h2
+        {
+          font-size: 2.5em;
+          color: white;
+        }
+
+        h3
+        {
+          font-size: 1.2em;
+          color: white;
+          margin-bottom: 0;
+        }
+      }
+
+      .section-body
+      {
+        display: none;
+      }
+
+      .purchaseFeatures
+      {
+        position: static;
+      }
+
+      &.section-price
+      {
+        padding-bottom: 0;
+      }
+    }
+
+    footer
+    {
+      #punchline
+      {
+        top: 30%;
+
+        h2
+        {
+          font-size: 1.5em;
+        }
+
+        .socialmedia
+        {
+          margin-top: 0;
+        }
+      }
+
+      .copyright
+      {
+        left: auto;
+        width: 100%;
+        margin: 0 auto;
       }
     }
   }

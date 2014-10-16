@@ -1,4 +1,4 @@
-//= require './lib/jquery-1.10.2.min'
+//= require './lib/jquery-1.11.1.min'
 
 //= require 'lib/bootstrap-3.0.3/collapse'
 //= require 'lib/bootstrap-3.0.3/tab'
@@ -7,7 +7,15 @@
 //= require 'lib/bootstrap-3.0.3/popover'
 //= require 'lib/bootstrap-3.0.3/modal'
 
-//= require './lib/jquery.easing-1.3'
-//= require './lib/jquery.royalslider.min'
+//= require 'lunr/lunr.min'
+//= require 'lunr/mustache'
+//= require 'lunr/date.format'
+//= require 'lunr/URI.min'
+//= require 'lunr/jquery.lunr.search'
+//= require './search'
+
+//= require './lib/jquery.countdown'
+
+//= require './general.js.coffee'
 
 //= require './analytics'

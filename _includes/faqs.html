@@ -1,6 +1,6 @@
-<li class="panel list-group-item">
-  <a data-toggle="collapse" data-parent="#faq_accordion" href="#faq-{{ counter }}">{{ faq.question }}</a>
+<div class="panel">
+  <h5 class="faq-question"><a data-toggle="collapse" data-parent="#faq_accordion" href="#faq-{{ counter }}">{{ faq.question }}</a></h5>
   <div id="faq-{{ counter }}" class="panel-collapse collapse">
-    <div class="panel-body">{{ faq.answer }}</div>
+    <div class="panel-body"><div class="well">{{ faq.answer }}</div></div>
   </div>
-</li>
+</div>

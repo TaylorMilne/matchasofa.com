@@ -116,16 +116,6 @@ $(document).ready ->
   $(".sidebar-cta-video").click ->
     $("#marqueeSlider .rsPlayBtnIcon").click()
 
-  # ADD ACTIVE CLASS TO THE "FEATURES" NAV ITEM WHEN SCROLLING DOWN
-  $(window).scroll ->
-    scrollPos = $(window).scrollTop()
-    if (scrollPos > 100)
-      if (!$("header nav #nav-features").hasClass("active"))
-        $("header nav #nav-features").addClass("active")
-    else
-      if ($("header nav #nav-features").hasClass("active"))
-        $("header nav #nav-features").removeClass("active")
-
 
   # FEATURES NAV ITEM CLICK AND HASH
   # ================================
@@ -133,12 +123,10 @@ $(document).ready ->
 
   $("header nav #nav-features").click ->
     scrollTo(featuresOffset, transitionSpeed)
-    console.log featuresOffset
 
   if (window.location.hash == "#features")
     setTimeout (->
       scrollTo(featuresOffset, 10)
-      console.log featuresOffset
       return
     ), 50
 
@@ -150,6 +138,29 @@ $(document).ready ->
     , transitionSpeed
     return
 
+
   # INITIALIZE SKROLLR.
   s = skrollr.init()
+
+
+  # UPDATE SKROLLR AFTER LANDINGSLIDE SHRINK
+  skrollrUpdated = false
+
+  scrollPos = $(window).scrollTop()
+  updateSkrollr(scrollPos)
+
+  $(window).scroll ->
+    scrollPos = $(window).scrollTop()
+    updateSkrollr(scrollPos)
+
+
+  return
+
+
+updateSkrollr = (scrollPos) ->
+  if ((scrollPos > $(window).height()) && (skrollrUpdated == false))
+    s.refresh($("#landing"))
+    skrollrUpdated = true
+    console.log "skrollr updated"
+    return
   return

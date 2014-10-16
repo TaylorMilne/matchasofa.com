@@ -1,6 +1,44 @@
 @import 'constants';
 @import 'mixins';
 
+// FONT COLOURS
+.darkgrey
+{
+  color: $grey20;
+
+  a
+  {
+    color: $grey20;
+
+    &:hover
+    {
+      color: white;
+    }
+  }
+}
+
+.mediumgrey
+{
+  color: $grey50;
+
+  a
+  {
+    color: $grey50;
+
+    &:hover
+    {
+      color: white;
+    }
+  }
+}
+
+
+// LINE BREAK
+.line-break
+{
+  height: 10px;
+}
+
 
 // SMALL MARGINS AND PADDINGS
 .p-b-small

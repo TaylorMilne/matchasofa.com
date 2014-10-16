@@ -72,7 +72,7 @@ body
     {
       margin-bottom: 20px;
 
-      li
+      .nav-item
       {
         display: inline-block;
         text-transform: uppercase;
@@ -106,22 +106,116 @@ body
       }
     }
 
-    address
-    {
-      margin-top: 130px;
-      margin-bottom: 0;
-    }
-
     .socialmedia
     {
       margin-top: 25px;
 
-      i
+      a
       {
-        font-size: 2.3em;
-        margin-right: 25px;
+        i
+        {
+          font-size: 2.3em;
+          margin-right: 25px;
+
+        }
+
+        &:last-child
+        {
+          i
+          {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    #punchline
+    {
+      text-align: center;
+      text-transform: uppercase;
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      margin: 0 auto;
+
+
+      h2
+      {
+        font-weight: 100;
+        font-size: 3em;
+      }
+
+      .socialmedia
+      {
+        a
+        {
+          i
+          {
+            font-size: 3em;
+          }
+        }
       }
     }
   }
+}
 
+@media (max-width: $screen-md-max)
+{
+  body
+  {
+    .container
+    {
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: $screen-sm-max)
+{
+  body
+  {
+    .container
+    {
+      max-width: 100%;
+    }
+
+    .container-fluid
+    {
+      padding: 20px 15px;
+    }
+
+    footer
+    {
+      nav
+      {
+        text-align: center;
+
+        .nav-item
+        {
+          font-size: 1.4em;
+
+          &:nth-child(3):after
+          {
+            content: "";
+          }
+        }
+      }
+
+      .socialmedia
+      {
+        text-align: center;
+
+        i
+        {
+          font-size: 2em;
+        }
+      }
+
+      .copyright
+      {
+        text-align: center;
+      }
+    }
+  }
 }

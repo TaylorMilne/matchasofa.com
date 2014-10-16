@@ -11,19 +11,19 @@ class: blog
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-10">
+      <div class="summer-content">
+        {% if site.paginate %}
+          {% for post in paginator.posts %}
+            {% include post.html %}
+          {% endfor %}
 
-    <div class="summer-content">
-
-      {% if site.paginate %}
-        {% for post in paginator.posts %}
-          {% include post.html %}
-        {% endfor %}
-
-        {% include paginator.html %}
-      {% endif %}
-
+          {% include paginator.html %}
+        {% endif %}
       </div>
+    </div>
+    <div class="col-xs-1 col-xs-offset-1 right-sidebar">
+      {% include social.html %}
     </div>
   </div>
 </div>
