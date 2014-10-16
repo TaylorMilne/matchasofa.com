@@ -1,20 +1,27 @@
 ---
 layout: post
 title: Modular outdoor
-description: "Some modular outdoor description here..."
-modified: 2014-08-29
+description: Some modular outdoor description here...
+modified: {}
 category: modular
-tags: [modular,white,outdoor]
-imagefeature: placeholders/inspiration/1-Hotel-and-Homes-South-Beach-Roof-Top-Lounge1.jpg
+tags: 
+  - modular
+  - white
+  - outdoor
+imagefeature: "placeholders/inspiration/1-Hotel-and-Homes-South-Beach-Roof-Top-Lounge1.jpg"
 author: Julian Jorgensen
 comments: true
 share: true
+published: true
 ---
-
 
 # Heading 1
 
 ### Body text
+
+This is a test
+
+![mah_jong_missoni_3.jpg](/_posts/mah_jong_missoni_3.jpg)
 
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
 
