@@ -29,7 +29,7 @@
   <meta property="og:image" content="{{ site.url }}/{{ site.logo_url | asset_path }}"/>
 
   <!-- stylesheets -->
-  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{% asset_path shared.css %}{% else %}http://matchasofa.com/assets/shared.css{% endif %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{{ site.url }}/assets/shared.css{% else %}{% asset_path shared.css %}{% endif %}"/>
 
   {% if page.class == "index" %}
     <link rel="stylesheet" type="text/css" href="{% asset_path index.css %}"/>
@@ -40,11 +40,11 @@
     <link rel="stylesheet" type="text/css" href="/skrollr/keyframes-mobile.css" media="screen and (max-width: 479px)" data-skrollr-stylesheet />
 
   {% else %}
-  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{% asset_path subpages.css %}{% else %}http://matchasofa.com/assets/subpages.css{% endif %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{{ site.url }}/assets/subpages.css{% else %}{% asset_path subpages.css %}{% endif %}"/>
   {% endif %}
 
   {% if page.class == "blog" %}
-  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{% asset_path blog/blog.css %}{% else %}http://matchasofa.com/assets/blog/blog.css{% endif %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{{ site.url }}/assets/blog/blog.css{% else %}{% asset_path blog/blog.css %}{% endif %}"/>
   {% endif %}
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -59,17 +59,17 @@
   {{ content }}
 
   <!-- MAIN JS STUFF -->
-  <script type="text/javascript" src="{% if page.url == "" %}{% asset_path shared.js %}{% else %}http://matchasofa.com/assets/shared.js{% endif %}"></script>
+  <script type="text/javascript" src="{% if page.url == "" %}{{ site.url }}/assets/shared.js{% else %}{% asset_path shared.js %}{% endif %}"></script>
 
   {% if page.class == "index" %}
-    <script type="text/javascript" src="{% asset_path index.js %}"></script>
+    <script type="text/javascript" src="{% if page.url == "" %}{{ site.url }}/assets/index.js{% else %}{% asset_path index.js %}{% endif %}"></script>
   {% else %}
-    <script type="text/javascript" src="{% asset_path subpages.js %}"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/subpages.js"></script>
   {% endif %}
 
 
   {% if page.class == "blog" %}
-    <script type="text/javascript" src="{% asset_path blog/blog.js %}"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/blog/blog.js"></script>
   {% endif %}
 
 
