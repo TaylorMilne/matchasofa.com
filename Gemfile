@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-ruby '2.0.0'
 
 gem 'jekyll',               '~> 1.0.3'
 gem 'jekyll-assets',        '~> 0.6.0'
@@ -7,7 +6,7 @@ gem 'uglifier',             '~> 2.1.0'
 gem 'sass',                 '~> 3.2.9'
 gem 'coffee-script'
 gem 'json',                 '~> 1.8.1'
-gem 'nokogiri'
+gem 'nokogiri',             '~> 1.6.3.1'
 gem 'jekyll-sitemap'
 
 # Shopify Theme Uploader
