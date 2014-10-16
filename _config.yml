@@ -49,7 +49,7 @@ prose:
   rooturl: '_posts'
   siteurl: 'http://matchasofa.com/blog'
   site: { "": "http://matchasofa.com/assets/shared.css" }
-  media: 'images'
+  media: '_posts/images/'
   metadata:
     _posts:
       - name: "title"
