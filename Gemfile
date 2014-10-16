@@ -8,7 +8,6 @@ gem 'coffee-script'
 gem 'json',                 '~> 1.8.1'
 gem 'nokogiri',             '~> 1.6.3.1'
 gem 'jekyll-sitemap'
-gem 'github-pages'
 
 # Shopify Theme Uploader
 gem 'shopify_theme'
