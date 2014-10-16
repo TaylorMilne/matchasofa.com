@@ -41,6 +41,58 @@ paginate_path: "/blog/page:num"
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /blog/:categories/:title
 
+
+
+
+# PROSE STUFF
+prose:
+  rooturl: ''
+  siteurl: 'http://matchasofa.com/blog'
+  media: '_assets/images/blog'
+  ignore:
+    - /_assets
+    - /_includes
+    - /_layouts
+    - /_plugins
+    - /_data
+    - /contact
+    - /details
+    - /info
+    - /partners
+    - /shopify
+    - /skrollr
+    - /units
+    - /.gitignore
+    - /.ruby-version
+    - /_config.yml
+    - /Gemfile
+    - /Gemfile.lock
+    - /index.html
+    - /Rakefile
+
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+      - name: "subtitle"
+        field:
+          element: "text"
+          label: "Sub title"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          help: "If Published, then it will appear on site after deploy"
+          value: "true"
+
+
 kramdown:
   auto_ids: true
   footnote_nr: 1
