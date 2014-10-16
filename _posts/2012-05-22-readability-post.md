@@ -2,14 +2,11 @@
 layout: post
 title: Testing Readability with a Bunch of Text
 description: A ton of text to test readability.
-category: articles
 tags: sample
-image: 
+image:
   feature: "blog/so-simple-sample-image-2.jpg"
   credit: Michael Rose
   creditlink: "http://mademistakes.com"
-comments: true
-share: true
 published: true
 ---
 
