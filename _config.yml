@@ -46,9 +46,10 @@ permalink:   /blog/:categories/:title
 
 # PROSE STUFF
 prose:
-  rooturl: ''
+  rooturl: '/blog'
   siteurl: 'http://matchasofa.com/blog'
   media: '_assets/images/blog'
+
   metadata:
     _posts:
       - name: "title"
