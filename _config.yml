@@ -46,10 +46,11 @@ permalink:   /blog/:categories/:title
 
 # PROSE STUFF
 prose:
-  rooturl: '/_posts'
+  rooturl: '/blog'
   siteurl: 'http://matchasofa.com/blog'
-  site: "http://matchasofa.com/assets/shared.css"
+  site: 'http://matchasofa.com/asset-urls.jsonp'
   media: '_assets/images/blog'
+  relativeLinks: 'http://matchasofa.com/links.jsonp'
   metadata:
     _posts:
       - name: "title"
