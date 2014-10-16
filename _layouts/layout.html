@@ -29,7 +29,7 @@
   <meta property="og:image" content="{{ site.url }}/{{ site.logo_url | asset_path }}"/>
 
   <!-- stylesheets -->
-  <link rel="stylesheet" type="text/css" href="{% asset_path shared.css %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{% asset_path shared.css %}{% else %}http://matchasofa.com/assets/shared.css{% endif %}"/>
 
   {% if page.class == "index" %}
     <link rel="stylesheet" type="text/css" href="{% asset_path index.css %}"/>
@@ -40,11 +40,11 @@
     <link rel="stylesheet" type="text/css" href="/skrollr/keyframes-mobile.css" media="screen and (max-width: 479px)" data-skrollr-stylesheet />
 
   {% else %}
-  <link rel="stylesheet" type="text/css" href="{% asset_path subpages.css %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{% asset_path subpages.css %}{% else %}http://matchasofa.com/assets/subpages.css{% endif %}"/>
   {% endif %}
 
   {% if page.class == "blog" %}
-  <link rel="stylesheet" type="text/css" href="{% asset_path blog/blog.css %}"/>
+  <link rel="stylesheet" type="text/css" href="{% if page.url == "" %}{% asset_path blog/blog.css %}{% else %}http://matchasofa.com/assets/blog/blog.css{% endif %}"/>
   {% endif %}
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -54,17 +54,12 @@
 
 <body class="page-{{ page.class | replace: ' ', '-' | downcase }}">
 
-<h1>URL: {{ page.url }}</h1>
-<h1>Path: {{ page.path }}</h1>
-<h1>ID: {{ page.id }}</h1>
-
-
   {% include fb.html %}
 
   {{ content }}
 
   <!-- MAIN JS STUFF -->
-  <script type="text/javascript" src="{% asset_path shared.js %}"></script>
+  <script type="text/javascript" src="{% if page.url == "" %}{% asset_path shared.js %}{% else %}http://matchasofa.com/assets/shared.js{% endif %}"></script>
 
   {% if page.class == "index" %}
     <script type="text/javascript" src="{% asset_path index.js %}"></script>
