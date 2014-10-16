@@ -54,9 +54,10 @@
 
 <body class="page-{{ page.class | replace: ' ', '-' | downcase }}">
 
-  <h1>Baseurl: {{ site.baseurl }}</h1>
-  <h1>Siteurl: {{ site.siteurl }}</h1>
-  <h1>Path: {{ site.path }}</h1>
+<h1>URL: {{ page.url }}</h1>
+<h1>Path: {{ page.path }}</h1>
+<h1>ID: {{ page.id }}</h1>
+
 
   {% include fb.html %}
 
