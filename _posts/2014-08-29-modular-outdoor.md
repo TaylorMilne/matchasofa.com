@@ -19,12 +19,6 @@ published: true
 
 ### Body text
 
-![Screen Shot 2014-10-14 at 7.25.04 PM.png](/_posts/images/Screen Shot 2014-10-14 at 7.25.04 PM.png)
-
-
-This is a test
-![Screen Shot 2014-10-02 at 8.49.12 PM.png](/_posts/images/Screen%20Shot%202014-10-02%20at%208.49.12%20PM.png)
-
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
 
 *This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times <cite>(That’s a citation)</cite>. <u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
