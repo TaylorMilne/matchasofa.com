@@ -64,6 +64,10 @@ prose:
         field:
           element: "text"
           label: "Sub title"
+      - name: "category"
+        field:
+          element: "select"
+          label: "Category"
       - name: "tags"
         field:
           element: "multiselect"
