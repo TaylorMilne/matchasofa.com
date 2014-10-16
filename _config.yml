@@ -48,7 +48,7 @@ permalink:   /blog/:categories/:title
 prose:
   rooturl: '_posts'
   siteurl: 'http://matchasofa.com/blog'
-  site: { "{% asset_path shared.css %}": "http://matchasofa.com/assets/shared.css" }
+  site: { "http://matchasofa.com/assets/shared.css" }
   media: '_assets/images/blog'
   metadata:
     _posts:
