@@ -48,9 +48,8 @@ permalink:   /blog/:categories/:title
 prose:
   rooturl: '/blog'
   siteurl: 'http://matchasofa.com/blog'
-  site: 'http://matchasofa.com/asset-urls.jsonp'
+  site: { "http://matchasofa.com/assets/shared.css","http://matchasofa.com/assets/subpages.css" }
   media: '_assets/images/blog'
-  relativeLinks: 'http://matchasofa.com/links.jsonp'
   metadata:
     _posts:
       - name: "title"
