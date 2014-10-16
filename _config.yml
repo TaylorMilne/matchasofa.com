@@ -68,6 +68,9 @@ prose:
         field:
           element: "select"
           label: "Category"
+          options:
+            - name: 'Modular'
+              value: 'modular'
       - name: "tags"
         field:
           element: "multiselect"
