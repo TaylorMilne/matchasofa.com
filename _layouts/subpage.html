@@ -5,16 +5,19 @@ layout: layout
 <!-- INCLUDE THE HEADER -->
 {% include header.html %}
   <main>
-    {% if page.showTitle == "true" %}<h1 class="page-title">{{ page.title | capitalize }}</h1>{% endif %}
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-md-10">
+        {% include page-title.html %}
+
+        <div class="col-xs-12 col-sm-10 col-sm-offset-0 col-md-9">
           {{ content }}
         </div>
-        <div class="hidden-xs hidden-sm col-md-1 col-md-offset-1 right-sidebar">
-          {% include social.html %}
-        </div>
+
+        {% include sidebar.html %}
       </div>
     </div>
   </main>
+
+{% include breadcrumb.html %}
+
 {% include footer.html %}

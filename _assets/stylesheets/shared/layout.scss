@@ -40,14 +40,17 @@ body
   padding: 0;
   margin: 0;
   background-color: $grey10;
+  overflow-x: hidden;
 
   .container-fluid
   {
-    padding: 40px 30px;
+    padding: 40px 0;
   }
 
   footer
   {
+    padding-left: 30px;
+    padding-right: 30px;
     position: relative;
     background-color: $grey10;
     color: $white;
@@ -106,7 +109,7 @@ body
       }
     }
 
-    .socialmedia
+    #social-follow
     {
       margin-top: 25px;
 
@@ -115,8 +118,7 @@ body
         i
         {
           font-size: 2.3em;
-          margin-right: 25px;
-
+          margin-right: 15px;
         }
 
         &:last-child
@@ -135,25 +137,14 @@ body
       text-transform: uppercase;
       position: absolute;
       top: 40%;
-      width: 100%;
-      margin: 0 auto;
-
+      left: 50%;
+      width: 80%;
+      margin-left: -40%;
 
       h2
       {
         font-weight: 100;
         font-size: 3em;
-      }
-
-      .socialmedia
-      {
-        a
-        {
-          i
-          {
-            font-size: 3em;
-          }
-        }
       }
     }
   }
@@ -182,18 +173,19 @@ body
 
     .container-fluid
     {
-      padding: 20px 15px;
+      padding: 20px 0;
     }
 
     footer
     {
       nav
       {
+        margin-top: 15px;
         text-align: center;
 
         .nav-item
         {
-          font-size: 1.4em;
+          font-size: 1.3em;
 
           &:nth-child(3):after
           {
@@ -202,14 +194,9 @@ body
         }
       }
 
-      .socialmedia
+      #social-follow
       {
         text-align: center;
-
-        i
-        {
-          font-size: 2em;
-        }
       }
 
       .copyright

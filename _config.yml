@@ -12,7 +12,7 @@ baseurl: /
 dev_url: http://localhost:4000
 stage_url: http://matchasofa.com
 prod_url: http://matchasofa.com
-url: http://localhost:4000 #default url
+url: http://matchaliving.com #default url
 logo_url: logo.png
 
 
@@ -20,7 +20,7 @@ logo_url: logo.png
 author: MATCHA SOFA #default author name
 fb_numeric_id: 584855071633081
 google_plus: matchasofa
-disqus_shortname: matchasofa
+disqus_shortname: matchaliving
 twitter_handle: matchasofa
 twitter_id: 000
 twitter_img_thumb: logo.png # should be square and 120 x 120
@@ -41,6 +41,7 @@ paginate_path: "/blog/page:num"
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /blog/:categories/:title
 
+tags_dir: /blog/tags
 
 
 
@@ -114,6 +115,9 @@ exclude:
 - Gemfile.lock
 - lib
 - shopify
+include:
+- .htpasswd
+- .htaccess
 assets:
   dirname: assets
   baseurl: /assets/
@@ -121,6 +125,7 @@ assets:
     - _assets/javascripts
     - _assets/stylesheets
     - _assets/images
+    - _assets/videos
   bundles:
     - 'shared.css'
     - 'shared.js'

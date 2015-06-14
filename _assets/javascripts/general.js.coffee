@@ -3,6 +3,9 @@ transitionSpeed = 500
 
 clickTabBasedOnHash = ->
   $("ul[data-tabs] li > a[href='" + window.location.hash + "'], ul[data-pills] > li > a[href='" + window.location.hash + "']").click()
+  setTimeout (->
+    window.scrollTo(0,0)
+  ), 20
   return
 
 
@@ -53,11 +56,23 @@ updateScreenClass = (windowWidth) ->
   return
 
 
+truncateText = ->
+  setTimeout (->
+    $(".readmore").readmore
+      moreLink: '<a href="#" class="readmore-js-toggle-more">Read more<span></span></a>'
+      lessLink: '<a href="#" class="readmore-js-toggle-less">Close</a>'
+  ), 200
+
 
 # DOCUMENT READY
 $(document).ready ->
+
+  if $(".readmore").length
+    truncateText()
+
   if (window.location.hash)
     clickTabBasedOnHash()
+
 
   # MOBILENAV
   $("#mobilenav i").click (e) ->
@@ -70,7 +85,6 @@ $(document).ready ->
         return
 
     e.preventDefault()
-
   # MOBILENAV END
 
 
@@ -79,22 +93,13 @@ $(document).ready ->
 
   $("#infoTabs a[data-toggle=\'tab\']").on "show.bs.tab", (e) ->
     location.hash = e.target.hash.substr(1)
-
-  # show more
-  if $(".showmore").length
-    setTimeout (->
-      $(".showmore").showMore
-        speedDown: 300
-        speedUp: 300
-        height: "165px"
-        showText: "Read more"
-        hideText: "Read less"
-    ), 200
+    if $(".readmore").length
+      truncateText()
 
 
   # COUNTDOWN
-  $("#clock").countdown("2014/10/30").on "update.countdown", (event) ->
-    $this = $(this).html(event.strftime("" + "<span>%-w</span> week%!w " + "<span>%-d</span> day%!d " + "<span>%H</span> hr " + "<span>%M</span> min " + "<span>%S</span> sec"))
+  $("#clock").countdown("2015/01/30").on "update.countdown", (event) ->
+    $this = $(this).html(event.strftime("" + "<span>%-w</span>w " + "<span>%-d</span>d " + "<span>%H</span>h " + "<span>%M</span>m " + "<span>%S</span>s"))
     return
 
 

@@ -2,13 +2,3 @@
 layout: subpage
 title: FAQs
 ---
-
-<ul class="list-group">
-  <div class="panel-group" id="faq_accordion">
-    {% assign counter=0 %}
-    {% for faq in site.data.faqs %}
-      {% assign counter=counter | plus:1 %}
-      {% include faqs.html %}
-    {% endfor %}
-  </div>
-</ul>

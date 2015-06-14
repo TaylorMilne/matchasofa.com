@@ -7,6 +7,9 @@
 //= require 'lib/bootstrap-3.0.3/popover'
 //= require 'lib/bootstrap-3.0.3/modal'
 
+//= require './lib/jquery.lazyload'
+//= require './lib/morphext'
+
 //= require 'lunr/lunr.min'
 //= require 'lunr/mustache'
 //= require 'lunr/date.format'

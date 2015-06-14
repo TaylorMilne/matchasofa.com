@@ -16,15 +16,40 @@ scrollTo = (scrollTo, speed) ->
 transitionSpeed = 500
 
 
-
 # DOCUMENT READY
 $(document).ready ->
 
+
+  # ROTATE
+  $(".rotate").Morphext
+    animation: "fadeInLeft"
+    speed: 3000
+
+  # LAZY LOAD IMAGES (BASED ON SCROLL THRESHOLD)
+  $("img.lazy").lazyload()
+
   # HOME BACKGROUND CYCLER
   $(".bgCycler").fadeIn 2500
-  setInterval (->
+  bgCycler = setInterval (->
     cycleImages()
-  ), 8000
+  ), 6000
+
+  # LAZY LOAD DELAYED IMAGES
+  $("img.lazy-delayed").lazyload event: "lazy-delayed"
+
+  # LAZY LOAD BG CYCLER IMAGES
+  $(".bgCycler img").not(":first").each ->
+    setTimeout (->
+      $(this).trigger "lazy-delayed"
+      return
+    ), 1000
+    return
+
+
+  $(".fabric").click ->
+    $(".section-fabric").css("background-image", "url('" + $(this).attr("data-original").replace("/palette", "") + "')")
+    return
+
 
 
   $(".royalSlider").click ->
@@ -83,30 +108,61 @@ $(document).ready ->
       pauseOnHover: false
 
 
+
+  # PRELOAD UNITS FOR LANDING PAGE
+  $([
+    "/images/sets/2.png"
+    "/images/sets/3.png"
+    "/images/sets/4.png"
+    "/images/sets/5.png"
+  ]).preload()
+
+
+  # PRELOAD UNITS FOR LANDING PAGE
+  $([
+    "/images/fabrics/purple.jpg"
+    "/images/fabrics/red.jpg"
+    "/images/fabrics/golden.jpg"
+    "/images/fabrics/silver.jpg"
+    "/images/fabrics/turqoise.jpg"
+    "/images/fabrics/charcoal.jpg"
+    "/images/fabrics/dessert.jpg"
+    "/images/fabrics/raw.jpg"
+  ]).preload()
+
+
   # INCREMENT UNITS
   units = 1
-  $(".sidebar-cta .btn.btn-add").click ->
-    units = units+1
+  $(".sidebar-cta .btn-add, .sidebar-cta .btn-subtract").click ->
+
+    if $(this).hasClass("btn-add")
+      if (units >= 5) #max 5
+        $(".sidebar-cta-video").addClass "pulse"
+        return false
+
+      units++
+    else
+      if (units <= 1) #min 1
+        return false
+
+      units--
+
+    # UPDATE NUMBER
     $(".unit-count span").html(units)
-    $.get "/units/" + units + ".html", (data) ->
-      $("#landing .units").html data
-      return
+
+    # CHANGE GRAPHIC
+    $("#landing .units img").attr("src","/images/sets/" + units + ".png")
 
 
   # LANDINGPAGE PULSE TIMEOUTS
   $(".sidebar-cta .btn.pulse").click ->
     $(this).removeClass "pulse"
 
-    setTimeout (->
-      $(".sidebar-cta-video").addClass "pulse"
-      return
-    ), 1500
-
     return
 
   # VARIABLES
-  landingHeightDecrease = ($(window).height() * 0.6)# this is how much the landing slide decreases in height (60% of window height)
-  landingHeight = ($(window).height() * 0.4) #this is the landing height after scrolling down
+  landingHeightDecrease = ($(window).height())# this is how much the landing slide decreases in height (60% of window height)
+  landingHeight = ($(window).height()) #this is the landing height after scrolling down
   videoMarqueeOffset = landingHeight
   videoMarqueePreEnd = videoMarqueeOffset + $("#marqueeSlider").height() - 300
   videoMarqueeEnd = videoMarqueeOffset + $(window).height()
@@ -116,19 +172,6 @@ $(document).ready ->
   $(".sidebar-cta-video").click ->
     $("#marqueeSlider .rsPlayBtnIcon").click()
 
-
-  # FEATURES NAV ITEM CLICK AND HASH
-  # ================================
-  featuresOffset = $("#features").offset().top + landingHeight
-
-  $("header nav #nav-features").click ->
-    scrollTo(featuresOffset, transitionSpeed)
-
-  if (window.location.hash == "#features")
-    setTimeout (->
-      scrollTo(featuresOffset, 10)
-      return
-    ), 50
 
   # SCROLL TO VIDEO WHEN IT IS IS PLAYED
   # ===================================
@@ -150,6 +193,7 @@ $(document).ready ->
   updateSkrollr(scrollPos)
 
   $(window).scroll ->
+    clearInterval(bgCycler)
     scrollPos = $(window).scrollTop()
     updateSkrollr(scrollPos)
 
@@ -157,10 +201,10 @@ $(document).ready ->
   return
 
 
+
 updateSkrollr = (scrollPos) ->
   if ((scrollPos > $(window).height()) && (skrollrUpdated == false))
     s.refresh($("#landing"))
     skrollrUpdated = true
-    console.log "skrollr updated"
     return
   return

@@ -6,6 +6,24 @@ body
   // Global styles
   header
   {
+    &.header-short
+    {
+      >nav
+      {
+        top: 40px;
+        padding: 0 30px;
+        width: 550px;
+      }
+
+      #search
+      {
+        position: fixed;
+        top: 55px;
+        right: 30px;
+        bottom: auto;
+      }
+    }
+
     >nav
     {
       position: fixed;
@@ -40,7 +58,7 @@ body
           {
             a
             {
-              opacity: 0.6;
+              opacity: 0.8;
             }
 
             &:after

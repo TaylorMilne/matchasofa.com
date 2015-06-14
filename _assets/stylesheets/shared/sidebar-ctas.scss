@@ -31,7 +31,8 @@ body
       &.sidebar-cta-unit
       {
         padding: 20px 30px;
-        bottom: 160px;
+        bottom: 40px;
+        z-index: 999999;
 
         .headline
         {
@@ -80,8 +81,8 @@ body
 
       &.sidebar-cta-video
       {
-        background-color: rgba($green, 0.8);
-        bottom: 40px;
+        background-color: rgba($green, 0.2);
+        bottom: 300px;
 
         .cta-wrapper .cta-content
         {

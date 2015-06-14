@@ -2,8 +2,9 @@
 // based on: http://tympanus.net/Development/ArticleIntroEffects/index3.html
 
 (function() {
+  setTimeout((function() {
 
-    if ($('.post-template:not(.page)').length) {
+    if (($('.post-template:not(.page)').length) && (!$("body").hasClass("screen_xs"))) {
 
         // detect if IE : from http://stackoverflow.com/a/16657946
         var ie = (function(){
@@ -146,5 +147,6 @@
         trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
 
     }
+  }), 20);
 
 })();

@@ -3,6 +3,11 @@
 
 body
 {
+  input, input:focus
+  {
+    outline: none;
+  }
+
   .btn
   {
     text-transform: uppercase;
@@ -10,10 +15,10 @@ body
     &.btn-add
     {
       color: $white;
-      background-color: $grey40;
+      background-color: $green;
     }
 
-    &.btn-substract
+    &.btn-subtract
     {
       background-color: $grey90;
     }

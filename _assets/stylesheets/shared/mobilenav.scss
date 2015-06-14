@@ -12,7 +12,7 @@ body, #skrollr-body
         display: none;
         position: absolute;
         right: 15px;
-        bottom: 5px;
+        bottom: 8px;
         font-size: 1.8em;
         color: white;
         cursor: pointer;
@@ -30,6 +30,25 @@ body, #skrollr-body
             color: white;
           }
 
+          .mobilenav-item
+          {
+            a
+            {
+              padding: 5px 10px;
+              display: block;
+            }
+
+            &:hover
+            {
+              background-color: rgba($green, 0.5);
+            }
+
+            &.active
+            {
+              background-color: $green;
+            }
+          }
+
           .mobilenav-subitems
           {
             margin-left: 20px;
@@ -44,7 +63,7 @@ body, #skrollr-body
 
 
 
-@media (max-width: $screen-sm-max)
+@media (max-width: $screen-xs-max)
 {
   body
   {
@@ -64,7 +83,12 @@ body, #skrollr-body
       overflow: hidden;
     }
 
-    >main, >header>nav, >footer
+    >.breadcrumbs
+    {
+      position: relative;
+    }
+
+    >main, >header>nav, >footer, >.breadcrumbs
     {
       @include transition(left $defaultTransitionSpeed);
     }
@@ -72,7 +96,7 @@ body, #skrollr-body
     // MAIN MOBILE NAV ACTIVE
     &.mobile-nav-active
     {
-      >main, >header>nav, >footer,
+      >main, >header>nav, >footer, >.breadcrumbs,
       #skrollr-body, #skrollr-body >header>nav, #skrollr-body >footer
       {
         left: -80%;

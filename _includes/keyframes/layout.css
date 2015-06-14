@@ -1,26 +1,3 @@
-.page-index #landing
-{
-  -skrollr-animation-name: decreaseLandingHeight;
-}
-
-@-skrollr-keyframes decreaseLandingHeight{
-  0 {
-    height: 100vh;
-    opacity: 1;
-  }
-
-  40 {
-    height: 95vh;
-    opacity: 0.9;
-  }
-
-  180 {
-    height: 40vh;
-    opacity: 0;
-  }
-}
-
-
 body.page-index header >nav
 {
   -skrollr-animation-name: collapseNav;
@@ -28,55 +5,30 @@ body.page-index header >nav
 
 @-skrollr-keyframes collapseNav{
   0 {
-    width: 600px;
+    background-color: rgba(26,26,26,1);
   }
 
-  40 {
-    width: 590px;
+  250 {
+    background-color: rgba(26,26,26,0.1);
+  }
+}
+
+
+
+body.page-index #landing .units
+{
+  -skrollr-animation-name: units;
+}
+
+@-skrollr-keyframes units{
+  0 {
+    bottom: 60px;
   }
 
   100 {
-    width: 250px;
-  }
-
-  200-end {
-    width: 250px;
-  }
-
-  end {
-    width: 600px;
+    bottom: 800px;
   }
 }
-
-
-
-.page-index header nav ul
-{
-  -skrollr-animation-name: hideNavItems;
-}
-
-@-skrollr-keyframes hideNavItems{
-  0 {
-    margin-left: 0px;
-    opacity: 1;
-  }
-
-  50 {
-    margin-left: -450px;
-    opacity: 0;
-  }
-
-  200-end {
-    margin-left: -450px;
-    opacity: 0;
-  }
-
-  end {
-    margin-left: 0px;
-    opacity: 1;
-  }
-}
-
 
 
 .page-index .sidebar-cta-unit,
@@ -88,14 +40,12 @@ body.page-index header >nav
 @-skrollr-keyframes sidebarCtas{
   0 {
     right: 0px;
+    opacity: 1;
   }
 
-  40 {
-    right: -50px;
-  }
-
-  100 {
+  150 {
     right: -550px;
+    opacity: 0;
   }
 }
 
@@ -145,12 +95,12 @@ body.page-index header >nav
 }
 
 @-skrollr-keyframes unit-top{
-  bottom-bottom {
-    top: -150px;
+  bottom-top {
+    top: -300px;
   }
 
-  top-top {
-    top: -50px;
+  center-top {
+    top: -100px;
   }
 }
 
@@ -160,12 +110,12 @@ body.page-index header >nav
 }
 
 @-skrollr-keyframes unit-bottom{
-  bottom-bottom {
+  bottom-top {
     top: 350px;
   }
 
-  top-top {
-    top: 268px;
+  center-top {
+    top: 105px;
   }
 }
 
@@ -186,6 +136,38 @@ body.page-index header >nav
 }
 
 
+.page-index .section-connect .unit-from-top
+{
+  -skrollr-animation-name: unit-from-top;
+}
+
+@-skrollr-keyframes unit-from-top{
+  bottom-top {
+    left: -150px;
+  }
+
+  center-top {
+    left: 50px;
+  }
+}
+
+.page-index .section-connect .ottoman-from-top
+{
+  -skrollr-animation-name: ottoman-from-top;
+}
+
+@-skrollr-keyframes ottoman-from-top{
+  bottom-top {
+    right: -150px;
+  }
+
+  center-top {
+    right: 50px;
+  }
+}
+
+
+
 .page-index .section-fabric
 {
   -skrollr-animation-name: fabrics;
@@ -198,5 +180,22 @@ body.page-index header >nav
 
   top-bottom {
     background-position: 100px 100px;
+  }
+}
+
+
+
+.page-index .section-delivery #van
+{
+  -skrollr-animation-name: delivery;
+}
+
+@-skrollr-keyframes delivery{
+  center-top {
+    right: -200px;
+  }
+
+  top-bottom {
+    right: -100px;
   }
 }

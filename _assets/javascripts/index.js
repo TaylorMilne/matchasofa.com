@@ -2,6 +2,8 @@
 //= require './lib/skrollr.min'
 //= require './lib/jquery.history.min'
 
+//= require './lib/jquery.preload'
+
 // ROYAL SLIDER
 //= require './royalslider/jquery.royalslider'
 

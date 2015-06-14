@@ -138,7 +138,7 @@
 	margin-left: -8px;
 	position: absolute;
 	cursor: pointer;
-	background: url('rs-default.png');
+	background: image-url('lib/rs-default.png');
 }
 
 .rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
@@ -262,7 +262,7 @@
 	width: 32px;
 	height: 32px;
 
-	background: url('rs-default.png') 0 0;
+	background: image-url('lib/rs-default.png') 0 0;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #000;
 	border-radius: 2px;
@@ -299,7 +299,7 @@
 	height:64px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-	background:url(rs-default.png) no-repeat 0 -32px;
+	background:image-url('lib/rs-default.png') no-repeat 0 -32px;
 
 	background-color: rgba(0,0,0,0.75);
 	-webkit-transition: .3s;
@@ -340,7 +340,7 @@
 	margin: 6px;
 	width: 32px;
 	height: 32px;
-	background: url('rs-default.png') -64px 0;
+	background: image-url('lib/rs-default.png') -64px 0;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
 }

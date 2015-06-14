@@ -19,8 +19,8 @@ header nav #search
 {
   position: absolute;
   right: 30px;
-  bottom: 10px;
   width: 30px;
+  bottom: 15px;
   @include transition(width $defaultTransitionSpeed);
 
   input

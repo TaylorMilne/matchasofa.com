@@ -71,18 +71,6 @@ $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 
 
-// Small screen / tablet
-$container-tablet:             ((1000px + $grid-gutter-width)) !default;
-$container-sm:                 $container-tablet !default;
-
-// Medium screen / desktop
-$container-desktop:            ((1000px + $grid-gutter-width)) !default;
-$container-md:                 $container-desktop !default;
-
-// Large screen / wide desktop
-$container-large-desktop:      ((1000px + $grid-gutter-width)) !default;
-$container-lg:                 $container-large-desktop !default;
-
 
 // TYPOGRAPHY
 // ===========

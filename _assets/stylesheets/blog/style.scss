@@ -83,6 +83,7 @@
   float: none;
   color: black;
   text-align: center;
+  margin-top: 15px;
 }
 
 .summer-content .summer-index-post .summer-index-post-tags a
@@ -94,6 +95,16 @@
   border: 1px solid black;
   border-radius: 0.125rem;
   margin-bottom: 0.3125rem;
+
+  &.tag
+  {
+    opacity: 0.6;
+
+    &:hover
+    {
+      opacity: 1;
+    }
+  }
 }
 
 .summer-content .summer-index-post .summer-index-post-tags a:hover
@@ -328,24 +339,4 @@ figcaption {
     text-align: center;
     font-size: 0.875rem;
     font-style:italic;
-}
-::-webkit-scrollbar {
-    width: 4px;
-    height: 6px;
-}
-
-::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.5);
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0,0,0,0.2);
 }

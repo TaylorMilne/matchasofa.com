@@ -6,6 +6,21 @@ class: blog
 <!-- INCLUDE THE HEADER -->
 {% include header.html %}
   <main>
-    {{ content }}
+    <div class="container-fluid">
+      <div class="row">
+        {% include page-title.html %}
+
+        <div class="col-xs-12 col-sm-10 col-sm-offset-0 col-md-8">
+          {{ content }}
+        </div>
+
+        {% if page.sidebar != "hide" %}{% include sidebar.html %}{% endif %}
+      </div>
+
+    </div>
+
   </main>
+
+{% include breadcrumb.html %}
+
 {% include footer.html %}
